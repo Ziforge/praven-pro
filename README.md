@@ -1,6 +1,6 @@
 # Praven Pro 🐦
 
-### **Pra**ven = Python + Raven | प्रवीण (pravīṇa) = Skilled, Expert (Sanskrit)
+### **Pra**ven = Python + Raven | प्रवीण (pravīṇa) = Skilled
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
@@ -502,4 +502,3 @@ For questions about this project, please contact George Redpath or open an issue
 
 - **NTNU** (Norwegian University of Science and Technology) - Acoustics research program
 - **BirdNET Team** - Cornell Lab of Ornithology & Chemnitz University of Technology
-- **Gaulossen Nature Reserve** - Recording location
