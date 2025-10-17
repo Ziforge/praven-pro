@@ -1,0 +1,17 @@
+# Raven MCP Server Requirements
+
+# MCP Framework
+mcp
+starlette
+uvicorn[standard]
+
+# Data processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# R integration for Rraven
+rpy2>=3.5.0
+
+# Audio utilities
+librosa>=0.10.0
+soundfile>=0.12.0

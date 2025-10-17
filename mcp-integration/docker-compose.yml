@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  raven-mcp:
+    build: ./raven-mcp
+    container_name: praven-raven-mcp
+    ports:
+      - "7085:7085"
+    volumes:
+      - "../audio_files:/workspace/shared/audio:ro"
+      - "../results:/workspace/shared/results"
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  # Optional: API Gateway (if you want HTTP endpoints)
+  api-gateway:
+    image: python:3.11-slim
+    container_name: praven-api-gateway
+    ports:
+      - "8080:8080"
+    volumes:
+      - "./api-gateway:/app"
+      - "../audio_files:/workspace/shared/audio:ro"
+      - "../results:/workspace/shared/results"
+    working_dir: /app
+    command: >
+      sh -c "pip install --no-cache-dir fastapi uvicorn requests &&
+             python server.py"
+    depends_on:
+      - raven-mcp
+    restart: unless-stopped

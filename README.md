@@ -352,6 +352,58 @@ PAD_AFTER_S = 0.3   # Context after detection (seconds)
 MAX_DETECTIONS_PER_FILE = None  # Limit visualizations per file (None = all)
 ```
 
+## Advanced: MCP Integration (Optional)
+
+For advanced users who need **programmatic access**, **automation**, or **integration into existing pipelines**, Praven Pro includes optional MCP (Model Context Protocol) services.
+
+### 🎯 When to Use MCP Integration
+
+✅ **Use MCP if you:**
+- Need HTTP REST API endpoints for automation
+- Want to integrate Praven Pro into existing workflows
+- Require R/Rraven for advanced acoustic measurements
+- Are batch processing 100+ files programmatically
+- Need to run on remote servers without GUI
+
+❌ **Use Jupyter notebook instead if you:**
+- Are analyzing <100 files
+- Prefer interactive analysis
+- Don't need API integration
+- Want simpler setup (no Docker required)
+
+### Quick Setup
+
+```bash
+cd mcp-integration
+docker compose up -d
+
+# Test the API
+curl http://localhost:8080/health
+```
+
+### Example: Export to Raven via API
+
+```bash
+curl -X POST http://localhost:8080/raven/export \
+  -H "Content-Type: application/json" \
+  -d '{
+    "detections_csv": "/workspace/shared/results/csvs/recording_001_detections.csv",
+    "output_path": "/workspace/shared/results/raven_tables/recording_001_raven.txt",
+    "audio_file": "recording_001.wav",
+    "audio_path": "/workspace/shared/audio/recording_001.wav",
+    "default_low_freq": 500.0,
+    "default_high_freq": 8000.0
+  }'
+```
+
+**📚 Full Documentation:** See [`mcp-integration/README.md`](mcp-integration/README.md) for:
+- Complete API reference
+- Batch processing examples
+- R/Rraven advanced measurements
+- Python integration examples
+- Architecture details
+- Troubleshooting guide
+
 ## Output Files
 
 ### Labels Directory (`results/labels/`)
