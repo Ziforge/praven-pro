@@ -1,13 +1,17 @@
-# Bird Audio Batch Analysis with Raven Pro Integration
+# Praven Pro 🐦
+
+### **Pra**ven = Python + Raven | प्रवीण (pravīṇa) = Skilled, Expert (Sanskrit)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![BirdNET](https://img.shields.io/badge/BirdNET-v0.18-green.svg)](https://github.com/kahst/BirdNET-Analyzer)
 [![Raven Pro](https://img.shields.io/badge/Raven%20Pro-Compatible-orange.svg)](https://www.ravensoundsoftware.com/)
 
-**Project:** NTNU Bioacoustics Research - Gaulossen Field Recordings (May 13-15, 2025)
+**A skilled bioacoustics workflow combining Python automation with Raven Pro's professional analysis tools.**
 
-A comprehensive Jupyter notebook-based workflow for batch processing of bird audio recordings using **BirdNET** for automated species identification, with integrated export to **Raven Pro** selection tables for professional bioacoustic analysis.
+Comprehensive Jupyter notebook-based system for batch processing of bird audio recordings using **BirdNET** for automated species identification, with seamless export to **Raven Pro** selection tables for expert-level bioacoustic analysis.
+
+**Originally developed for:** NTNU Bioacoustics Research - Gaulossen Field Recordings (May 13-15, 2025)
 
 ## Features
 
@@ -31,10 +35,11 @@ A comprehensive Jupyter notebook-based workflow for batch processing of bird aud
 ## Project Structure
 
 ```
-bird-net-batch-analysis/
+praven-pro/
 ├── audio_files/          # Place your WAV/MP3 files here
 ├── results/              # All outputs go here
 │   ├── labels/          # Audacity label files (one per audio file)
+│   ├── raven_tables/    # Raven Pro selection tables (NEW!)
 │   ├── visualizations/  # Spectrogram/waveform plots
 │   ├── csvs/            # Per-file detection CSVs
 │   ├── all_detections.csv
@@ -60,7 +65,7 @@ bird-net-batch-analysis/
 Clone or download this repository, then install dependencies:
 
 ```bash
-cd bird-net-batch-analysis
+cd praven-pro
 
 # Create virtual environment (recommended)
 python3 -m venv venv
@@ -314,11 +319,11 @@ First run will download ~100MB of model files. This is normal and only happens o
 If you use this code in your research, please credit:
 
 ```bibtex
-@software{redpath2025birdnet,
+@software{redpath2025praven,
   author = {Redpath, George},
-  title = {BirdNET Batch Analysis with Raven Pro Integration},
+  title = {Praven Pro: Skilled Bioacoustics Analysis with Python and Raven},
   year = {2025},
-  url = {https://github.com/georgeredpath/bird-net-batch-analysis}
+  url = {https://github.com/georgeredpath/praven-pro}
 }
 ```
 

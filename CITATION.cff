@@ -4,11 +4,11 @@ authors:
   - family-names: "Redpath"
     given-names: "George"
     orcid: "https://orcid.org/0000-0000-0000-0000"
-title: "BirdNET Batch Analysis with Raven Pro Integration"
+title: "Praven Pro: Skilled Bioacoustics Analysis with Python and Raven"
 version: 1.0.0
 date-released: 2025-01-17
-url: "https://github.com/georgeredpath/bird-net-batch-analysis"
-repository-code: "https://github.com/georgeredpath/bird-net-batch-analysis"
+url: "https://github.com/georgeredpath/praven-pro"
+repository-code: "https://github.com/georgeredpath/praven-pro"
 keywords:
   - bioacoustics
   - ornithology
