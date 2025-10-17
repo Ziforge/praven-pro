@@ -32,6 +32,131 @@ Comprehensive Jupyter notebook-based system for batch processing of bird audio r
   - Detection metrics (F0, formants, spectral features)
 - **Large File Support**: Memory-efficient processing for multi-hour recordings
 
+## Workflow Overview
+
+```mermaid
+graph LR
+    A[Audio Files<br/>WAV/MP3/FLAC] -->|Cell 1: Config| B[BirdNET Analysis<br/>Species ID]
+    B -->|Cell 2| C[Detections CSV<br/>+ Audacity Labels]
+    C -->|Cell 2b| D[Raven Pro<br/>Selection Tables]
+    C -->|Cell 3| E[Visualizations<br/>F0/Formants]
+    C -->|Cell 4| F[Summary<br/>Statistics]
+
+    style A stroke:#2563eb,stroke-width:3px
+    style B stroke:#16a34a,stroke-width:3px
+    style C stroke:#9333ea,stroke-width:3px
+    style D stroke:#ea580c,stroke-width:3px
+    style E stroke:#0891b2,stroke-width:3px
+    style F stroke:#dc2626,stroke-width:3px
+```
+
+## Analysis Pipeline
+
+```mermaid
+flowchart TD
+    Start([Field Recordings]) --> Load[Load Audio Files]
+    Load --> BirdNET{BirdNET<br/>Deep Learning}
+    BirdNET -->|Confidence > 0.25| Detect[Valid Detections]
+    BirdNET -->|Confidence < 0.25| Reject[Filtered Out]
+
+    Detect --> Process[Process Each Detection]
+    Process --> F0[F0 Estimation<br/>librosa.pyin]
+    Process --> Formants[Formant Analysis<br/>LPC Method]
+    Process --> Spec[Spectrogram<br/>Generation]
+
+    F0 --> Outputs
+    Formants --> Outputs
+    Spec --> Outputs
+
+    Outputs[Multiple Outputs] --> CSV[CSV Files<br/>Detections + Metrics]
+    Outputs --> Audacity[Audacity Labels<br/>Time Regions]
+    Outputs --> Raven[Raven Pro Tables<br/>Selection Tables]
+    Outputs --> Viz[PNG Images<br/>Spectrograms]
+
+    CSV --> End([Research Dataset])
+    Audacity --> End
+    Raven --> End
+    Viz --> End
+
+    style Start stroke:#2563eb,stroke-width:3px
+    style BirdNET stroke:#16a34a,stroke-width:3px
+    style Detect stroke:#9333ea,stroke-width:3px
+    style Outputs stroke:#ea580c,stroke-width:3px
+    style End stroke:#dc2626,stroke-width:3px
+```
+
+## Data Flow
+
+```mermaid
+graph TD
+    subgraph Input["Input Layer"]
+        A1[recording_001.wav]
+        A2[recording_002.wav]
+        A3[recording_003.wav]
+    end
+
+    subgraph Processing["Processing Layer"]
+        B[BirdNET Analysis]
+        C[Acoustic Feature Extraction]
+    end
+
+    subgraph Output["Output Layer"]
+        D1[all_detections.csv<br/>Master CSV]
+        D2[Audacity Labels<br/>Per-file .txt]
+        D3[Raven Tables<br/>Per-file .txt]
+        D4[Spectrograms<br/>Per-detection PNG]
+        D5[Summary Charts<br/>Species counts]
+    end
+
+    A1 --> B
+    A2 --> B
+    A3 --> B
+    B --> C
+    C --> D1
+    C --> D2
+    C --> D3
+    C --> D4
+    C --> D5
+
+    style Input stroke:#2563eb,stroke-width:3px
+    style Processing stroke:#16a34a,stroke-width:3px
+    style Output stroke:#ea580c,stroke-width:3px
+```
+
+## Raven Pro Integration
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Jupyter as Jupyter Notebook
+    participant BirdNET
+    participant Praven as Praven Converter
+    participant Raven as Raven Pro
+
+    User->>Jupyter: Cell 2: Run BirdNET Analysis
+    Jupyter->>BirdNET: Process audio files
+    BirdNET-->>Jupyter: Return detections
+    Jupyter->>Jupyter: Save detections CSV
+
+    User->>Jupyter: Cell 2b: Export to Raven
+    Jupyter->>Praven: Convert detections
+    Note over Praven: Add frequency bounds<br/>Format as tab-delimited<br/>Include file paths
+    Praven-->>Jupyter: Raven selection tables
+    Jupyter->>Jupyter: Save .txt files
+
+    User->>Raven: Open selection table
+    Raven->>Raven: Load audio + selections
+    Note over Raven: View spectrograms<br/>Run measurements<br/>Manual refinement
+    Raven-->>User: Professional analysis
+
+    rect rgb(37, 99, 235, 0.1)
+        Note over Jupyter,Praven: Python Automation
+    end
+    rect rgb(234, 88, 12, 0.1)
+        Note over Raven: Professional Analysis
+    end
+```
+
 ## Project Structure
 
 ```
