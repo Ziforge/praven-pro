@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Redpath"
+    given-names: "George"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+title: "BirdNET Batch Analysis with Raven Pro Integration"
+version: 1.0.0
+date-released: 2025-01-17
+url: "https://github.com/georgeredpath/bird-net-batch-analysis"
+repository-code: "https://github.com/georgeredpath/bird-net-batch-analysis"
+keywords:
+  - bioacoustics
+  - ornithology
+  - bird monitoring
+  - BirdNET
+  - Raven Pro
+  - acoustic analysis
+  - biodiversity
+  - species identification
+license: MIT
+abstract: >
+  A comprehensive Jupyter notebook-based workflow for batch processing
+  of bird audio recordings using BirdNET for automated species identification,
+  with integrated export to Raven Pro selection tables for professional
+  bioacoustic analysis. Includes F0/formant analysis, spectrogram generation,
+  and support for large audio files. Developed for NTNU bioacoustics research.
+references:
+  - type: article
+    authors:
+      - family-names: "Kahl"
+        given-names: "Stefan"
+      - family-names: "Wood"
+        given-names: "Connor M."
+      - family-names: "Eibl"
+        given-names: "Maximilian"
+      - family-names: "Klinck"
+        given-names: "Holger"
+    title: "BirdNET: A deep learning solution for avian diversity monitoring"
+    journal: "Ecological Informatics"
+    volume: 61
+    year: 2021
+    doi: "10.1016/j.ecoinf.2020.101236"

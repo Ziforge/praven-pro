@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Audio files (these are large - don't commit to git)
+audio_files/*.wav
+audio_files/*.mp3
+audio_files/*.flac
+audio_files/*.ogg
+audio_files/*.m4a
+
+# Results (generated output - don't commit)
+results/
+*.csv
+*.png
+*.txt
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# BirdNET model cache
+.birdnet/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Keep directory structure but ignore contents
+!audio_files/.gitkeep
+!results/.gitkeep
