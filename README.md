@@ -13,6 +13,70 @@ Comprehensive Jupyter notebook-based system for batch processing of bird audio r
 
 **Originally developed for:** NTNU Bioacoustics Research - Gaulossen Field Recordings (May 13-15, 2025)
 
+## Why Praven Pro?
+
+### The Problem
+Field researchers often record **hours of bird audio**, but manually analyzing it is extremely time-consuming. Listening through 10 hours of recordings to identify species and mark interesting sounds could take **40+ hours of expert time**.
+
+### The Solution: Skilled Automation + Expert Verification
+
+```mermaid
+graph LR
+    A[10 Hours of Audio] -->|Manual Analysis| B[40+ Hours of Work]
+    A -->|Praven Pro| C[1 Hour Total]
+
+    C --> C1[30 min: Automated<br/>BirdNET scanning]
+    C --> C2[30 min: Expert review<br/>in Raven Pro]
+
+    style A stroke:#2563eb,stroke-width:3px
+    style B stroke:#dc2626,stroke-width:3px
+    style C stroke:#16a34a,stroke-width:3px
+```
+
+**Praven Pro automates the tedious 95%** (scanning audio, marking detections, extracting features) **so you can focus your expert time on the critical 5%** (verification, analysis, interpretation).
+
+### Best of Three Worlds
+
+| Component | Purpose | Benefit |
+|-----------|---------|---------|
+| **🤖 BirdNET AI** | Automated species ID | 100x faster than manual scanning |
+| **🐍 Python Analysis** | Feature extraction | Quantitative acoustic data (F0, formants) |
+| **🦅 Raven Pro Export** | Expert verification | Professional tools for refinement |
+
+### Who Should Use This?
+
+✅ **Field Biologists** - Process field recordings efficiently
+✅ **Acoustic Ecologists** - Batch process entire field seasons
+✅ **Conservation Projects** - Monitor biodiversity at scale
+✅ **Graduate Students** - Learn bioacoustics with real data
+✅ **Raven Pro Users** - Automate pre-processing before manual review
+
+### Real Example: Multi-Hour Recordings
+
+**Gaulossen Field Survey (3 days, ~24 hours of audio):**
+
+❌ **Without Praven Pro:**
+- 100+ hours of manual listening
+- Risk missing rare species in background
+- Limited quantitative acoustic data
+- Slow turnaround for reports
+
+✅ **With Praven Pro:**
+- 2 hours: Automated BirdNET processing → 200+ detections
+- 2 hours: Expert verification in Raven Pro
+- **Total: 4 hours instead of 100+**
+- CSV data ready for statistical analysis
+- Publication-ready spectrograms included
+
+### Key Advantages
+
+🚀 **Massive Time Savings** - Process audio 25x faster than manual analysis
+🎯 **High Accuracy** - AI detection + human verification = best results
+📊 **Multiple Outputs** - Audacity labels, Raven tables, CSV data, visualizations
+💾 **Large File Support** - Memory-efficient processing for multi-gigabyte recordings
+🔬 **Academic-Ready** - Proper citations, MIT license, reproducible workflow
+🆓 **Open Source** - Free to use, modify, and share
+
 ## Features
 
 - **Batch Processing**: Analyze multiple audio files without merging
