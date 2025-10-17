@@ -11,7 +11,7 @@
 
 Comprehensive Jupyter notebook-based system for batch processing of bird audio recordings using **BirdNET** for automated species identification, with seamless export to **Raven Pro** selection tables for expert-level bioacoustic analysis.
 
-**Originally developed for:** NTNU Bioacoustics Research - Gaulossen Field Recordings (May 13-15, 2025)
+**Originally developed for:** NTNU Bioacoustics Research - Gaulossen Field Recordings (October 13-15, 2025)
 
 ## Why Praven Pro?
 
