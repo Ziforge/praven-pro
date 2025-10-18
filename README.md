@@ -77,6 +77,31 @@ graph LR
 🔬 **Academic-Ready** - Proper citations, MIT license, reproducible workflow
 🆓 **Open Source** - Free to use, modify, and share
 
+## Real-World Case Studies
+
+### Gaulossen Nature Reserve Acoustic Monitoring (October 2025)
+
+**Project:** NTNU Bioacoustics Research - Long-term acoustic monitoring study
+**Location:** Gaulossen Nature Reserve, Stjørdal, Norway (63.4305°N, 10.3951°E)
+**Duration:** 3 days continuous recording (October 13-15, 2025)
+
+#### Results:
+- **82 verified bird species** detected from 24 hours of audio
+- **4,108 verified detections** processed using Praven Pro's Raven MCP conversion functions
+- Spectrograms and audio clips published to [interactive website](https://ziforge.github.io/gaulossen-study/)
+- Complete behavioral analysis including migration timing and call-response patterns
+- Processing time reduced from estimated 100+ hours to ~6 hours total
+
+#### Technical Implementation:
+- Used Praven Pro's `create_raven_selection_table()` function via MCP
+- Converted BirdNET detections to Raven Pro format for expert verification
+- Generated publication-ready spectrograms and compressed audio for web deployment
+- Automated species gallery with 82 species profiles, spectrograms, and audio samples
+
+**View the full study:** [https://ziforge.github.io/gaulossen-study/](https://ziforge.github.io/gaulossen-study/)
+
+This project validated Praven Pro's Raven MCP conversion functions in a production research environment, demonstrating the tool's effectiveness for large-scale bioacoustic studies.
+
 ## Features
 
 - **Batch Processing**: Analyze multiple audio files without merging
