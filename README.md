@@ -1,13 +1,10 @@
-# Praven Pro 2.0 - BirdNET Biological Validation
+# Praven Pro 2.2 - BirdNET Biological Validation
 
 **Automated biological validation for BirdNET acoustic monitoring using taxonomic rules**
 
-[![Version](https://img.shields.io/badge/version-2.1-blue.svg)](https://github.com/Ziforge/praven-pro)
-[![Coverage](https://img.shields.io/badge/species-4000+-green.svg)](https://github.com/Ziforge/praven-pro)
+[![Version](https://img.shields.io/badge/version-2.2-blue.svg)](https://github.com/Ziforge/praven-pro)
 [![Families](https://img.shields.io/badge/families-40-green.svg)](praven/data/taxonomic_rules.json)
-[![Tested](https://img.shields.io/badge/tested-1000%20samples-brightgreen.svg)](docs/scientific/SCIENTIFIC_VALIDATION_RESULTS.md)
-[![Precision](https://img.shields.io/badge/precision-100%25-brightgreen.svg)](docs/scientific/SCIENTIFIC_VALIDATION_RESULTS.md)
-[![Rejections](https://img.shields.io/badge/rejections-23%2F23%20correct-success.svg)](docs/scientific/SCIENTIFIC_VALIDATION_RESULTS.md)
+[![License](https://img.shields.io/badge/license-Non--Commercial-orange.svg)](LICENSE)
 
 ## Overview
 
@@ -16,7 +13,7 @@ Praven Pro automatically validates BirdNET detections using **biological rules**
 - ✅ **Temporal validation:** Diurnal woodpeckers at night? Reject!
 - ✅ **Habitat validation:** Oceanic birds 100m inland? Reject!
 - ✅ **Geographic validation:** Non-native species? Flag for review!
-- ✅ **Taxonomic rules:** Family-level biology covers 2,500+ species!
+- ✅ **Taxonomic rules:** Family-level biology for 40 bird families!
 
 ## Features
 
@@ -104,14 +101,15 @@ print(result.status)  # "REJECT"
 print(result.reason)  # "Nocturnal impossibility: diurnal species at 23:45"
 ```
 
-### Validation Results
+### Gaulossen Study Results
 
-Tested on **1,000 independent samples** in blind test:
-- ✅ **100% precision** on auto-accepted detections (84/84 correct)
-- ✅ **23/23 biological violations** correctly identified
-- ✅ **0 false positives** (no invalid detections accepted)
+Tested on the Gaulossen Nature Reserve dataset (October 2025):
+- ✅ **6,805 detections** processed automatically
+- ✅ **Smart review:** 6,202 detections → 192 selected for manual verification
+- ✅ **Species validation:** 82.2% pass rate (74/90 species)
+- ✅ **Known rejections:** Lesser Spotted Woodpecker (nocturnal impossibility), European Storm-Petrel (oceanic habitat mismatch), and others
 
-[Full validation results →](docs/scientific/SCIENTIFIC_VALIDATION_RESULTS.md)
+[Full study →](https://ziforge.github.io/gaulosen-study/)
 
 ## Module Structure
 
@@ -201,7 +199,7 @@ rejected[["species", "timestamp", "rejection_reason"]].to_csv("rejected.csv")
 
 ## Known Rejections (Gaulossen Study)
 
-The system correctly auto-rejects these false positives:
+The system identified these biologically implausible detections:
 
 1. **Lesser Spotted Woodpecker** (14 detections)
    - Reason: Nocturnal impossibility (diurnal species detected at night)
