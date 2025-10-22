@@ -168,21 +168,14 @@ python web_app.py
 
 ## Key Metrics
 
-**Validation Performance:**
-- Auto-accept precision: 100% (84/84 correct)
-- Known violations caught: 100% (23/23)
-- False positive rate: 0%
-
-**Workload Reduction:**
-- Original review: 6,201 detections
-- Smart review: 192 detections (top 3 per species)
-- Reduction: 97%
+**Gaulossen Dataset Results:**
+- Original detections: 6,201
+- Smart review selection: 192 detections (top 3 per species)
+- Species-level pass rate: 82.2% (74/90 species)
 
 **Taxonomic Coverage:**
-- Families: 40
-- Estimated species: 4,000+
-- Manually curated: 62 species
-- Coverage: 95%+ of common species
+- Families: 40 bird families
+- Primarily European species
 
 ---
 

@@ -89,10 +89,10 @@ Reason: Habitat mismatch + Temporal impossibility (diurnal species at night)
 
 ## Effectiveness
 
-### Species-Level Accuracy
+### Species-Level Results
 - **Total BirdNET species:** 90
 - **Auto-rejected species:** 5
-- **Rejection precision:** 100% (all rejections are biologically valid)
+- **Biologically implausible detections identified:** All rejections based on taxonomic rules
 
 ### Detection-Level Efficiency
 - **Automatic decisions:** 1,196 detections (17.6%)
@@ -105,22 +105,22 @@ Reason: Habitat mismatch + Temporal impossibility (diurnal species at night)
 The most important catch - 10 Lesser Spotted Woodpecker detections between 22:52 and 04:25 were **automatically rejected** due to temporal impossibility. Woodpeckers are strictly diurnal and cannot vocalize at night.
 
 ### 2. Oceanic Birds Inland (7 detections)
-Storm-Petrels and Shearwaters detected 100m inland were correctly rejected as pelagic species never occur in inland wetlands.
+Storm-Petrels and Shearwaters detected 100m inland were rejected as pelagic species - these typically do not occur in inland wetlands.
 
 ### 3. Habitat Mismatches (18 detections)
-Forest-specialist species (woodpeckers, capercaillie) detected in open wetland were correctly flagged as habitat mismatches.
+Forest-specialist species (woodpeckers, capercaillie) detected in open wetland were flagged as habitat mismatches.
 
 ### 4. Non-native Species (1 detection)
-Bar-headed Goose (native to Himalayan region) was correctly identified as non-native to Europe.
+Bar-headed Goose (native to Himalayan region) was identified as non-native to Europe.
 
 ## Comparison to Manual Verification
 
-The manually verified dataset (4,108 detections, 82 species) was used as the reference standard. Praven Pro's auto-rejections represent a **separate validation layer** that catches biologically impossible detections based on hard rules:
+The manually verified dataset (4,108 detections, 82 species) was used as the reference standard. Praven Pro's auto-rejections represent a **separate validation layer** that identifies biologically implausible detections based on taxonomic rules:
 
-- ✅ **100% biological validity:** All auto-rejections are scientifically defensible
-- ✅ **Temporal validation:** Caught all nocturnal woodpecker false positives
-- ✅ **Habitat validation:** Caught all oceanic species inland
-- ✅ **Native range validation:** Caught non-native escaped birds
+- **Temporal validation:** Identified nocturnal woodpecker detections
+- **Habitat validation:** Identified oceanic species inland
+- **Native range validation:** Identified non-native species
+- **Development context:** Tested on single wetland study, requires broader validation
 
 ## Files Generated
 
@@ -146,7 +146,7 @@ python3 examples/validate_gaulossen_fast.py
 ### 1. Get eBird API Key
 - Register at: https://ebird.org/api/keygen
 - Enables geographic occurrence validation (check if species recorded in area)
-- Would further improve rejection precision
+- Would provide additional geographic validation
 
 ### 2. Add More Species to Database
 Current database covers 77+ species. Expand with:
@@ -175,16 +175,14 @@ Integrate Praven Pro as **Stage 1** validation:
 
 ## Conclusion
 
-Praven Pro successfully identified **23 biologically impossible detections** in the Gaulossen dataset using automated validation rules. The system caught:
+Praven Pro identified **23 biologically implausible detections** in the Gaulossen dataset using automated validation rules. The system flagged:
 
-- ✅ 10 nocturnal woodpecker false positives (temporal impossibility)
-- ✅ 7 oceanic birds inland (habitat impossibility)
-- ✅ 1 non-native species (geographic impossibility)
-- ✅ 5 habitat mismatches (ecological impossibility)
+- 10 nocturnal woodpecker detections (temporal violation)
+- 7 oceanic birds inland (habitat violation)
+- 1 non-native species (geographic violation)
+- 5 habitat mismatches (ecological violation)
 
-**All rejections are scientifically defensible and would require manual rejection anyway.**
-
-This demonstrates that automated biological validation can significantly improve BirdNET accuracy by catching systematic false positives before human review, saving researcher time and improving data quality.
+**Development Context:** This test was conducted on a single wetland study. The system requires extensive development for broader real-world deployment, including validation on multiple datasets, expanded species coverage, and testing across diverse habitats and geographic regions.
 
 ---
 

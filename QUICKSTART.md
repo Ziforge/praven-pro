@@ -6,7 +6,7 @@ Praven Pro automatically validates BirdNET detections using **biodiversity APIs 
 
 ## Test Results (Gaulossen Dataset)
 
-**100% accuracy** on known false positives:
+Known biological violations identified:
 
 | Species | Time | Status | Reason |
 |---------|------|--------|--------|
@@ -75,7 +75,7 @@ python examples/validate_csv.py BirdNET_results.txt \
 python examples/basic_validation.py
 ```
 
-See the 8 test cases run and validate 100% accuracy.
+See the 8 test cases run and demonstrate validation logic.
 
 ## Validation Logic
 

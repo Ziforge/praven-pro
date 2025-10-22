@@ -26,8 +26,7 @@ Praven Pro is a post-processing validation layer for BirdNET that applies biolog
 
 **Coverage:**
 - 40 bird families
-- Estimated 4,000+ species
-- 95%+ of commonly encountered species
+- Primarily European species
 
 ### 2. Data Management
 
@@ -81,19 +80,7 @@ Praven Pro is a post-processing validation layer for BirdNET that applies biolog
 - Ground truth: Expert-verified labels
 - Test type: Blind (no prior exposure to labels)
 
-**Results:**
-- Auto-accept precision: 100% (84/84 correct)
-- False positive rate: 0% (no invalid detections accepted)
-- Known violation detection: 100% (23/23 caught)
-
-**Error analysis:**
-- False negatives: 7 detections
-  - 6 Lesser Spotted Woodpecker (valid but flagged nocturnal)
-  - 1 European Storm-Petrel (valid but flagged inland)
-- Root cause: Rules correctly applied, ground truth based on audio quality only
-
-**Interpretation:**
-The system successfully identifies biologically implausible detections that pass audio quality review. The 7 false negatives represent edge cases where audio quality was good but biological context was uncertain.
+**Note:** This was an internal development test used to tune validation rules. Results should not be considered independent validation as the test data was used during system development.
 
 ---
 

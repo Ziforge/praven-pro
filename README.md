@@ -201,12 +201,6 @@ rejected[["species", "timestamp", "rejection_reason"]].to_csv("rejected.csv")
 - Stage 2 (Biological): 82 → 74 species (90.2% pass)
 - **Overall: 82.2% pass rate**
 
-**Automated Validation (Target):**
-- Auto-accept high confidence + all checks pass: ~60%
-- Auto-reject clear violations: ~15%
-- Flagged for human review: ~25%
-- **Goal: 95%+ accuracy on auto-accept/reject decisions**
-
 ## Known Rejections (Gaulossen Study)
 
 The system identified these biologically implausible detections:

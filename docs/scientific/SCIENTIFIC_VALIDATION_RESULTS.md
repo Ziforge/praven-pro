@@ -1,21 +1,16 @@
-# Praven Pro 2.0 - Scientific Validation Results
+# Praven Pro 2.0 - Development Test Results
 
 **Date:** October 22, 2025
-**Test Type:** Blind test on 1,000 independent samples
+**Test Type:** Internal development test
 **Dataset:** Gaulossen Nature Reserve, Norway (October 2025)
+
+**⚠️ IMPORTANT:** This was an internal development test used to tune validation rules. Results should not be considered independent validation as the test data was used during system development. The system has only been validated on a single wetland study and requires extensive development for broader real-world deployment.
 
 ---
 
 ## Executive Summary
 
-Praven Pro was tested on 1,000 bird detections with expert-verified labels in a completely blind test. The system demonstrated:
-
-- ✅ **100% precision on auto-accept** (84/84 correct)
-- ✅ **0 false positives** (no invalid detections slipped through)
-- ⚠️ **7 biological rejections** of audio-quality-verified detections
-- 📊 **91% review rate** (conservative approach)
-
-**Key Finding:** Praven successfully identifies biologically implausible detections that pass audio quality review, demonstrating its complementary role to traditional verification methods.
+This internal test examined how validation rules performed on 1,000 detections from the development dataset. The test helped identify edge cases and tune rule parameters.
 
 ---
 
@@ -54,8 +49,7 @@ Weather: Rain (0.8), Fog (0.7), Temperature (8°C)
 
 | Metric | Value | Interpretation |
 |--------|-------|----------------|
-| Accuracy | 49.5% | Lower because Praven flags biologically implausible cases |
-| Precision (overall) | 100% | Perfect - all accepted detections were valid |
+| Accuracy | 49.5% | Conservative approach flags many detections for review |
 | Recall (overall) | 14.3% | Conservative - only auto-accepts highest confidence |
 | F1-Score | 25.0% | Reflects conservative approach |
 
@@ -63,7 +57,7 @@ Weather: Rain (0.8), Fog (0.7), Temperature (8°C)
 
 | Status | Count | % | Ground Truth Breakdown |
 |--------|-------|---|----------------------|
-| **ACCEPT** | 84 | 8.4% | 84 valid, 0 invalid (100% precision) |
+| **ACCEPT** | 84 | 8.4% | 84 valid, 0 invalid |
 | **REVIEW** | 909 | 90.9% | 505 valid, 411 invalid (45.2% invalid) |
 | **REJECT** | 7 | 0.7% | 7 valid*, 0 invalid |
 
@@ -90,17 +84,13 @@ Label   Valid          505     84
 
 ### ACCEPT Performance (84 detections)
 
-**Precision: 100%** (84/84 correct)
-
-When Praven auto-accepts a detection, it is **always correct**. This makes auto-accepted detections safe to use without further review.
+**Note:** In this development test, 84/84 auto-accepted detections matched the audio quality ground truth. This test was used to tune rule parameters.
 
 **Characteristics of accepted detections:**
 - High confidence scores (>0.6)
 - Passes all validation checks (temporal, habitat, geographic)
 - Common species with expected occurrence
 - Appropriate time of day and habitat
-
-**Recommendation:** Auto-accepted detections can be used directly for analysis without manual verification.
 
 ### REVIEW Performance (909 detections)
 
@@ -167,11 +157,11 @@ The 7 rejected detections are **textbook examples** of biological impossibility:
 - Oceanic seabirds inland (1 detection)
 - Forest specialists in wetland (multiple violations)
 
-These would typically be caught in manual biological review, but Praven automates this step with 100% accuracy.
+These would typically be caught in manual biological review, and Praven provides an automated check for these patterns.
 
-### 2. No False Positives (Perfect Specificity)
+### 2. Development Test Performance
 
-**0 invalid detections were accepted** by Praven. This is critical for data quality - no biological errors slip through to the accepted set.
+In this development test, 0 invalid detections were accepted. Note that this was used during rule development and tuning.
 
 ### 3. Conservative Approach is Appropriate
 
@@ -229,8 +219,8 @@ This two-stage approach combines:
   - Review needed: 5,609 (82.4%)
 - **Time saved:** ~40 minutes (biological review automated for accept/reject)
 
-**Praven catches:**
-- All 23 known biological violations with 100% precision
+**Praven identified:**
+- 23 biological violations in development test
 - Nocturnal impossibilities (woodpeckers, diurnal species)
 - Habitat mismatches (oceanic, forest specialists)
 - Geographic anomalies (non-native species)
@@ -267,38 +257,34 @@ Traditional accuracy is not the right metric for this task because:
 
 | Metric | Value | What It Means |
 |--------|-------|---------------|
-| **Accept Precision** | 100% | When Praven says "definitely valid", it's always right |
-| **False Positive Rate** | 0% | No invalid detections slip through |
-| **Biological Error Detection** | 100% | All known biological violations caught |
-| **Review Quality** | 45% invalid | Nearly half of REVIEW cases are actually invalid |
+| **Auto-accept rate** | 8.4% | Conservative approach |
+| **Review rate** | 90.9% | Most detections require manual review |
+| **Auto-reject rate** | 0.7% | Conservative on rejections |
 
 ---
 
 ## Scientific Validity
 
-### Is This Scientifically Publishable?
+### System Limitations
 
-**YES**, with proper framing:
+**Important Constraints:**
 
-1. **Correct positioning:**
-   - Praven is a **biological validation filter**, not a replacement for expert review
-   - It **complements** audio quality review
-   - It **automates** systematic biological checks
+1. **Proof-of-concept status:**
+   - Validated on single wetland study only
+   - Requires extensive development for broader deployment
+   - Not independently tested on other datasets
 
-2. **Demonstrated capabilities:**
-   - ✅ Perfect precision on auto-accept (0 false positives)
-   - ✅ Catches all known biological violations
-   - ✅ Consistent rule application (no human variability)
-   - ✅ Scalable to large datasets
+2. **Limited coverage:**
+   - 40 bird families (primarily European species)
+   - Incomplete weather data (missing humidity, pressure, snow/ice)
+   - Single habitat type (wetlands only)
+   - Limited geographic scope (Norway 63°N)
 
-3. **Acknowledged limitations:**
-   - High review rate (91%) - requires human verification
+3. **Validation approach:**
+   - High review rate (91%) - most detections require manual verification
    - May flag valid edge cases (e.g., vagrant species)
    - Rules based on typical biology (exceptions exist)
-
-### Recommended Framing for Publication
-
-> *"Praven Pro provides automated biological validation of acoustic monitoring data by applying taxonomic rules for temporal activity, habitat preferences, and geographic occurrence. In blind testing on 1,000 independently verified detections, Praven achieved perfect precision (100%) on auto-accepted detections while successfully identifying all known biological violations (23/23), including nocturnal detections of diurnal species and oceanic species detected inland. The system flagged 91% of detections for human review, demonstrating appropriate conservatism for a validation tool. Praven serves as a complementary filter to traditional audio quality review, automating systematic biological checks and documenting rejection reasons for transparency."*
+   - Development test data used for rule tuning
 
 ---
 
@@ -311,9 +297,9 @@ Traditional accuracy is not the right metric for this task because:
    BirdNET → Audio Review → Praven → Final Dataset
    ```
 
-2. **Trust auto-accepted detections:**
-   - 100% precision means these are safe to use
-   - Save time by skipping manual review of ACCEPT
+2. **Review auto-accepted detections with caution:**
+   - Development test showed good performance, but independent validation needed
+   - Consider manual spot-checking of auto-accepted detections
 
 3. **Prioritize REVIEW detections:**
    - Focus manual review on REVIEW (not ACCEPT)
@@ -337,9 +323,9 @@ Traditional accuracy is not the right metric for this task because:
    - Helps users prioritize manual checks
 
 3. **Expand taxonomic coverage:**
-   - Current: 25 families, ~2,500 species
-   - Target: 50 families, ~5,000 species
-   - Add subfamily-level rules for precision
+   - Current: 40 families (primarily European)
+   - Target: Broader geographic coverage
+   - Add subfamily-level rules for improved validation
 
 4. **Integrate eBird frequency data:**
    - Real-time occurrence likelihood
@@ -352,30 +338,33 @@ Traditional accuracy is not the right metric for this task because:
 
 ### Main Conclusions
 
-1. **Praven successfully identifies biologically implausible detections** that pass audio quality review
-   - 7 rejections in test sample (woodpeckers at night, seabirds inland)
-   - All were biologically impossible despite good audio
+1. **Proof-of-concept demonstration on single dataset**
+   - Internal development test on 1,000 detections from Gaulossen
+   - Identified 7 biological violations (woodpeckers at night, seabirds inland)
+   - Test data used during rule development and tuning
 
-2. **Perfect precision on auto-accept** makes Praven highly reliable
-   - 84/84 auto-accepted detections were valid
-   - Users can trust these without further review
+2. **Conservative validation approach**
+   - 91% review rate - most detections require manual verification
+   - Validation tools should be conservative to avoid errors
+   - Independent validation on other datasets needed
 
-3. **Conservative approach is appropriate** for a validation tool
-   - 91% review rate ensures no errors slip through
-   - Validation tools should err on side of caution
+3. **Limited to single study context**
+   - Validated on Norway wetland study only
+   - 40 bird families (primarily European species)
+   - Requires extensive development for broader deployment
 
-4. **Praven complements, not replaces, expert review**
-   - Audio quality review still requires human expertise
-   - Praven automates biological plausibility checks
-   - Together, they provide comprehensive validation
+4. **Complements manual expert review**
+   - Not a replacement for audio quality review
+   - Provides automated biological plausibility checks
+   - Requires human verification for most detections
 
-### Scientific Contribution
+### Development Status
 
-Praven Pro demonstrates that **rule-based biological validation** can effectively identify systematic errors in acoustic monitoring data. Unlike machine learning approaches that learn dataset-specific patterns, Praven applies universal biological laws (e.g., "woodpeckers are diurnal") that generalize across studies and geographies.
-
-The system caught 23 biological violations in the Gaulossen dataset that were accepted based on audio quality, including:
+Praven Pro represents a **proof-of-concept** for rule-based biological validation. The system identified 23 biological violations in the Gaulossen development dataset, including:
 - 14 nocturnal woodpecker detections
 - 7 oceanic seabirds inland
+
+**Important:** This system requires extensive development before broader real-world deployment, including independent validation, expanded species coverage, complete weather parameters, and testing across diverse habitats and geographic regions.
 - 2 habitat mismatches
 
 This demonstrates the value of **automated biological validation** as a complement to traditional audio-quality-focused review processes.
