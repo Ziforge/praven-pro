@@ -275,7 +275,7 @@ See [LICENSE](LICENSE) for full terms.
 - [Process Flow Diagrams](docs/DIAGRAMS.md) - Visual workflow diagrams
 
 ### User Guides
-- [Smart Review Guide](docs/guides/SMART_REVIEW_GUIDE.md) - Reduce review workload by 97%
+- [Smart Review Guide](docs/guides/SMART_REVIEW_GUIDE.md) - Prioritize detections for manual review
 - [Complete Documentation Index](docs/README.md) - All documentation
 
 ### Scientific Validation
