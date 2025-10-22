@@ -111,6 +111,13 @@ Tested on the Gaulossen Nature Reserve dataset (October 2025):
 
 [Full study →](https://ziforge.github.io/gaulosen-study/)
 
+**⚠️ Current Limitations:** This system is a proof-of-concept validated on a single wetland study. Extensive development is required for broader real-world deployment, including:
+- Expanded species coverage beyond 40 bird families
+- Regional phenology databases for migration timing
+- Validation across diverse habitat types and geographic regions
+- Independent testing on multiple datasets
+- Peer review of validation methodology
+
 ## Module Structure
 
 ```
