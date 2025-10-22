@@ -1,0 +1,42 @@
+================================================================================
+Praven Pro - Scientific Validation Report
+================================================================================
+
+Test Configuration
+--------------------------------------------------------------------------------
+Location: (63.341, 10.215)
+Habitat: wetland
+Test size: 1,000 detections
+Species: 44
+
+Performance Metrics
+--------------------------------------------------------------------------------
+Overall Accuracy:        0.495
+Precision:               1.000
+Recall:                  0.143
+F1-Score:                0.250
+
+Rejection Performance (Key Metric)
+--------------------------------------------------------------------------------
+Rejection Precision:     0.000
+  (Of rejections, % actually invalid)
+Rejection Recall:        0.000
+  (Of invalid detections, % caught)
+
+Confusion Matrix
+--------------------------------------------------------------------------------
+                    Predicted
+                    Invalid  Valid
+Actual Invalid         411       0
+       Valid           505      84
+
+Error Analysis
+--------------------------------------------------------------------------------
+False Positives (missed invalids): 0
+False Negatives (wrong rejections): 7
+True Positives (correct rejections): 0
+
+Top False Negatives (Praven rejected but expert said valid):
+  Lesser Spotted Woodpecker: 6
+  European Storm-Petrel: 1
+

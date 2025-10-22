@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "praven-pro"
+version = "2.1.0"
+description = "Automated biological validation for BirdNET acoustic monitoring"
+readme = "README.md"
+authors = [
+    {name = "George Redpath", email = "ghredpath@hotmail.com"}
+]
+license = {text = "Non-Commercial (Commercial licensing available - contact ghredpath@hotmail.com)"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "License :: Other/Proprietary License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+keywords = ["birdnet", "acoustic", "monitoring", "ornithology", "bioacoustics", "validation"]
+dependencies = [
+    "pandas>=1.5.0",
+    "numpy>=1.20.0",
+    "requests>=2.25.0",
+    "scikit-learn>=1.0.0",
+    "pydantic>=2.0.0",
+]
+requires-python = ">=3.8"
+
+[project.optional-dependencies]
+web = ["flask>=2.0.0"]
+viz = ["plotly>=5.0.0", "matplotlib>=3.5.0"]
+dev = ["pytest>=7.0.0", "black>=22.0.0", "flake8>=4.0.0"]
+all = ["flask>=2.0.0", "plotly>=5.0.0", "matplotlib>=3.5.0"]
+
+[project.urls]
+Homepage = "https://github.com/Ziforge/praven-pro"
+Documentation = "https://github.com/Ziforge/praven-pro/blob/main/README.md"
+Repository = "https://github.com/Ziforge/praven-pro"
+"Bug Tracker" = "https://github.com/Ziforge/praven-pro/issues"
+
+[project.scripts]
+praven = "validate:main"
+praven-web = "web_app:app.run"
+
+[tool.setuptools]
+packages = ["praven", "praven.api", "praven.rules", "praven.models"]
+
+[tool.setuptools.package-data]
+praven = ["data/*.json", "data/*.csv"]
+
+[tool.black]
+line-length = 100
+target-version = ['py38', 'py39', 'py310', 'py311', 'py312']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]

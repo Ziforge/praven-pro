@@ -1,0 +1,60 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+ENV/
+env/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Praven Pro specific
+cache/                    # API caches (habitat, weather, eBird)
+*.log                     # Log files
+web_app.log
+validation/praven_results_*.csv   # Generated validation results
+validation/praven_results_*.json
+validation/praven_results_*.txt
+validation/praven_results_*.xlsx
+examples/*/praven_results_*       # Generated example results
+data/models/*.pkl         # Trained models (optional)
+data/models/*.json        # Model metadata
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Temporary files
+temp/
+tmp/
+*.tmp

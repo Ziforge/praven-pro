@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praven Pro - BirdNET Biological Validation</title>
+    <meta name="description" content="Automated biological validation for BirdNET acoustic monitoring using taxonomic rules">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.4em;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .hero .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            font-size: 1.1em;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #667eea;
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        /* Stats Section */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .stat-card {
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .stat-number {
+            font-size: 3em;
+            font-weight: 700;
+            color: #667eea;
+            display: block;
+        }
+
+        .stat-label {
+            color: #666;
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 60px;
+            color: #2c3e50;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            padding: 30px;
+            border-radius: 10px;
+            background: #f8f9fa;
+        }
+
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .how-it-works h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 60px;
+            color: #2c3e50;
+        }
+
+        .steps {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .step {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+            align-items: start;
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8em;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .step-content p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Installation */
+        .installation {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .installation h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 60px;
+            color: #2c3e50;
+        }
+
+        .install-options {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .install-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .install-card h3 {
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        pre {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-size: 0.9em;
+        }
+
+        code {
+            font-family: 'Monaco', 'Menlo', monospace;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .hero p {
+                font-size: 1.2em;
+            }
+
+            .step {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>🐦 Praven Pro</h1>
+        <p>Automated Biological Validation for BirdNET Acoustic Monitoring</p>
+        <div class="buttons">
+            <a href="https://github.com/Ziforge/praven-pro" class="btn btn-primary">View on GitHub</a>
+            <a href="#installation" class="btn btn-secondary">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="stat-card">
+            <span class="stat-number">Top 3</span>
+            <div class="stat-label">Per Species Review</div>
+        </div>
+        <div class="stat-card">
+            <span class="stat-number">192</span>
+            <div class="stat-label">vs 6,201 Samples</div>
+        </div>
+        <div class="stat-card">
+            <span class="stat-number">Auto</span>
+            <div class="stat-label">Habitat Detection</div>
+        </div>
+        <div class="stat-card">
+            <span class="stat-number">Auto</span>
+            <div class="stat-label">Weather Fetching</div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <h2>Key Features</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <h3>Auto-Detection</h3>
+                <p>Automatically detects habitat from GPS coordinates and fetches historical weather data. No manual data entry needed.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">⏱️</div>
+                <h3>Temporal Validation</h3>
+                <p>Checks if detections match species activity patterns. Rejects diurnal woodpeckers at night, nocturnal owls during day.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🏞️</div>
+                <h3>Habitat Matching</h3>
+                <p>Validates species-habitat compatibility. Flags oceanic birds inland, forest species in wetlands.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📍</div>
+                <h3>Geographic Range</h3>
+                <p>Checks eBird occurrence data. Identifies vagrant species and non-native detections.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🧬</div>
+                <h3>Taxonomic Rules</h3>
+                <p>Family-level biological rules covering 40 bird families and 4,000+ species worldwide.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Smart Review</h3>
+                <p>Reduces review workload by 97%. Selects top 3 detections per species for efficient manual validation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Upload BirdNET CSV</h3>
+                    <p>Upload your BirdNET detection results (works with BirdNET Analyzer, BirdNET-Pi, and other variants).</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Enter GPS Coordinates</h3>
+                    <p>Provide latitude and longitude of your recording location. Habitat and weather will be auto-detected.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Automatic Validation</h3>
+                    <p>Praven applies biological rules: temporal patterns, habitat matching, geographic range checks, and taxonomic constraints.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Review Results</h3>
+                    <p>Get validated detections: auto-accepted (high confidence), auto-rejected (violations), and priority review (top 3 per species).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation -->
+    <section class="installation" id="installation">
+        <h2>Installation</h2>
+        <div class="install-options">
+            <div class="install-card">
+                <h3>📦 PyPI Installation</h3>
+                <p>Install via pip (recommended):</p>
+                <pre><code>pip install praven-pro</code></pre>
+                <p>Run validation:</p>
+                <pre><code>praven detections.csv \
+  --lat 63.341 --lon 10.215 \
+  --date 2025-10-15</code></pre>
+            </div>
+
+            <div class="install-card">
+                <h3>🐍 From Source</h3>
+                <p>Clone and install:</p>
+                <pre><code>git clone https://github.com/Ziforge/praven-pro
+cd praven-pro
+pip install -r requirements.txt</code></pre>
+                <p>Run validation:</p>
+                <pre><code>python validate.py data.csv \
+  --lat X --lon Y \
+  --date YYYY-MM-DD</code></pre>
+            </div>
+
+            <div class="install-card">
+                <h3>🌐 Web Interface</h3>
+                <p>Run local web server:</p>
+                <pre><code>python web_app.py</code></pre>
+                <p>Open in browser:</p>
+                <pre><code>http://localhost:5001</code></pre>
+                <p>Drag-and-drop CSV, enter GPS, click Validate!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>Praven Pro 2.2</strong> - Automated BirdNET Biological Validation</p>
+        <p style="margin-top: 20px;">
+            <a href="https://github.com/Ziforge/praven-pro">GitHub</a> •
+            <a href="https://github.com/Ziforge/praven-pro/issues">Issues</a> •
+            <a href="mailto:ghredpath@hotmail.com">Contact</a>
+        </p>
+        <p style="margin-top: 20px; opacity: 0.7;">
+            Non-commercial use only. Free for academic research, education, and conservation.
+        </p>
+        <p style="margin-top: 10px; opacity: 0.7;">
+            Commercial licensing: <a href="mailto:ghredpath@hotmail.com">ghredpath@hotmail.com</a>
+        </p>
+    </footer>
+</body>
+</html>

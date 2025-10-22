@@ -1,0 +1,200 @@
+{
+  "Eurasian Curlew": {
+    "total_detections": 10,
+    "weather_resilience": 0.5,
+    "peak_hour_count": 2,
+    "hourly_variance": 0.5345224838248488
+  },
+  "Carrion Crow": {
+    "total_detections": 84,
+    "weather_resilience": 0.5,
+    "peak_hour_count": 23,
+    "hourly_variance": 7.3824115301167
+  },
+  "Mallard": {
+    "total_detections": 27,
+    "weather_resilience": 0.3,
+    "peak_hour_count": 9,
+    "hourly_variance": 2.381748784554591
+  },
+  "Tawny Owl": {
+    "total_detections": 23,
+    "weather_resilience": 0.3,
+    "peak_hour_count": 5,
+    "hourly_variance": 1.5898986690282426
+  },
+  "Hooded Crow": {
+    "total_detections": 87,
+    "weather_resilience": 0.5,
+    "peak_hour_count": 24,
+    "hourly_variance": 8.069834088890689
+  },
+  "Eurasian Magpie": {
+    "total_detections": 6,
+    "weather_resilience": 0.5,
+    "peak_hour_count": 3,
+    "hourly_variance": 1.0
+  },
+  "Black-headed Gull": {
+    "total_detections": 6,
+    "weather_resilience": 0.5,
+    "peak_hour_count": 3,
+    "hourly_variance": 1.0
+  },
+  "Canada Goose": {
+    "total_detections": 47,
+    "weather_resilience": 0.3,
+    "peak_hour_count": 12,
+    "hourly_variance": 3.617975067595629
+  },
+  "Gray Heron": {
+    "total_detections": 9,
+    "weather_resilience": 0.5,
+    "peak_hour_count": 2,
+    "hourly_variance": 0.5477225575051661
+  },
+  "Little Bunting": {
+    "total_detections": 9,
+    "weather_resilience": 0.5,
+    "peak_hour_count": 4,
+    "hourly_variance": 1.5
+  },
+  "Eurasian Woodcock": {
+    "total_detections": 57,
+    "weather_resilience": 0.5,
+    "peak_hour_count": 31,
+    "hourly_variance": 9.785192895390463
+  },
+  "Yellowhammer": {
+    "total_detections": 24,
+    "weather_resilience": 0.3,
+    "peak_hour_count": 7,
+    "hourly_variance": 2.1908902300206643
+  },
+  "Rook": {
+    "total_detections": 45,
+    "weather_resilience": 0.3,
+    "peak_hour_count": 9,
+    "hourly_variance": 2.3669736167866557
+  },
+  "Graylag Goose": {
+    "total_detections": 2871,
+    "weather_resilience": 0.9,
+    "peak_hour_count": 422,
+    "hourly_variance": 120.77388592630085
+  },
+  "Pink-footed Goose": {
+    "total_detections": 189,
+    "weather_resilience": 0.5,
+    "peak_hour_count": 52,
+    "hourly_variance": 11.692702777613652
+  },
+  "Eurasian Coot": {
+    "total_detections": 14,
+    "weather_resilience": 0.3,
+    "peak_hour_count": 4,
+    "hourly_variance": 1.2110601416389968
+  },
+  "Ring-necked Pheasant": {
+    "total_detections": 10,
+    "weather_resilience": 0.5,
+    "peak_hour_count": 2,
+    "hourly_variance": 0.4629100498862757
+  },
+  "Greater White-fronted Goose": {
+    "total_detections": 71,
+    "weather_resilience": 0.5,
+    "peak_hour_count": 20,
+    "hourly_variance": 4.475423082201937
+  },
+  "Tundra Swan": {
+    "total_detections": 7,
+    "weather_resilience": 0.5,
+    "peak_hour_count": 4,
+    "hourly_variance": 1.5275252316519465
+  },
+  "Common Crane": {
+    "total_detections": 70,
+    "weather_resilience": 0.5,
+    "peak_hour_count": 21,
+    "hourly_variance": 4.635223200413014
+  },
+  "Great Snipe": {
+    "total_detections": 189,
+    "weather_resilience": 0.5,
+    "peak_hour_count": 82,
+    "hourly_variance": 24.94320822114983
+  },
+  "Common Grasshopper-Warbler": {
+    "total_detections": 59,
+    "weather_resilience": 0.5,
+    "peak_hour_count": 51,
+    "hourly_variance": 24.281337140555777
+  },
+  "Lesser Spotted Woodpecker": {
+    "total_detections": 14,
+    "weather_resilience": 0.3,
+    "peak_hour_count": 2,
+    "hourly_variance": 0.5163977794943223
+  },
+  "Northern Lapwing": {
+    "total_detections": 13,
+    "weather_resilience": 0.3,
+    "peak_hour_count": 3,
+    "hourly_variance": 0.7264831572567789
+  },
+  "Water Rail": {
+    "total_detections": 7,
+    "weather_resilience": 0.5,
+    "peak_hour_count": 5,
+    "hourly_variance": 2.3094010767585034
+  },
+  "Mistle Thrush": {
+    "total_detections": 7,
+    "weather_resilience": 0.5,
+    "peak_hour_count": 3,
+    "hourly_variance": 0.9574271077563381
+  },
+  "Eurasian Nutcracker": {
+    "total_detections": 9,
+    "weather_resilience": 0.5,
+    "peak_hour_count": 2,
+    "hourly_variance": 0.4472135954999579
+  },
+  "Meadow Pipit": {
+    "total_detections": 9,
+    "weather_resilience": 0.5,
+    "peak_hour_count": 4,
+    "hourly_variance": 1.5
+  },
+  "Gray Wagtail": {
+    "total_detections": 6,
+    "weather_resilience": 0.5,
+    "peak_hour_count": 4,
+    "hourly_variance": 1.4142135623730951
+  },
+  "Red-breasted Flycatcher": {
+    "total_detections": 9,
+    "weather_resilience": 0.5,
+    "peak_hour_count": 5,
+    "hourly_variance": 2.0
+  },
+  "European Robin": {
+    "total_detections": 6,
+    "weather_resilience": 0.5,
+    "peak_hour_count": 5,
+    "hourly_variance": 2.8284271247461903
+  },
+  "White Wagtail": {
+    "total_detections": 7,
+    "weather_resilience": 0.5,
+    "peak_hour_count": 5,
+    "hourly_variance": 2.1213203435596424
+  },
+  "European Greenfinch": {
+    "total_detections": 11,
+    "weather_resilience": 0.3,
+    "peak_hour_count": 7,
+    "hourly_variance": 3.0550504633038935
+  }
+}

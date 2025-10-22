@@ -1,0 +1,476 @@
+{
+  "species": {
+    "Great Snipe": {
+      "scientific_name": "Gallinago media",
+      "diurnal": false,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.95, "grassland": 0.7, "forest": 0.1, "oceanic": 0.0, "urban": 0.0},
+      "migration": {"resident": false, "summer_visitor": false, "winter_visitor": false, "passage_migrant": true},
+      "active_months": [8, 9, 10],
+      "iucn_status": "Near Threatened"
+    },
+    "Graylag Goose": {
+      "scientific_name": "Anser anser",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": true,
+      "habitat_preferences": {"wetland": 0.95, "grassland": 0.8, "forest": 0.1, "oceanic": 0.3, "urban": 0.2},
+      "migration": {"resident": true, "summer_visitor": true, "winter_visitor": false, "passage_migrant": true},
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "notes": "Nocturnal migration and feeding"
+    },
+    "Pink-footed Goose": {
+      "scientific_name": "Anser brachyrhynchus",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": true,
+      "habitat_preferences": {"wetland": 0.95, "grassland": 0.8, "forest": 0.1, "oceanic": 0.3, "urban": 0.1},
+      "migration": {"resident": false, "summer_visitor": false, "winter_visitor": true, "passage_migrant": true},
+      "active_months": [9, 10, 11, 12, 1, 2, 3, 4],
+      "notes": "Nocturnal migration calls common"
+    },
+    "Greater White-fronted Goose": {
+      "scientific_name": "Anser albifrons",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": true,
+      "habitat_preferences": {"wetland": 0.9, "grassland": 0.7, "forest": 0.1, "oceanic": 0.2, "urban": 0.1},
+      "migration": {"resident": false, "summer_visitor": false, "winter_visitor": true, "passage_migrant": true},
+      "active_months": [9, 10, 11, 12, 1, 2, 3, 4],
+      "notes": "Nocturnal migration"
+    },
+    "Barnacle Goose": {
+      "scientific_name": "Branta leucopsis",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": true,
+      "habitat_preferences": {"wetland": 0.9, "grassland": 0.8, "forest": 0.0, "oceanic": 0.4, "urban": 0.1},
+      "migration": {"resident": false, "summer_visitor": false, "winter_visitor": true, "passage_migrant": true},
+      "active_months": [9, 10, 11, 12, 1, 2, 3],
+      "notes": "Coastal and wetland specialist"
+    },
+    "Canada Goose": {
+      "scientific_name": "Branta canadensis",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.95, "grassland": 0.7, "forest": 0.1, "oceanic": 0.2, "urban": 0.5},
+      "migration": {"resident": true, "summer_visitor": true, "winter_visitor": false, "passage_migrant": false},
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "notes": "Introduced species, now resident"
+    },
+    "Common Crane": {
+      "scientific_name": "Grus grus",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": true,
+      "habitat_preferences": {"wetland": 0.95, "grassland": 0.7, "forest": 0.3, "oceanic": 0.0, "urban": 0.1},
+      "migration": {"resident": false, "summer_visitor": true, "winter_visitor": false, "passage_migrant": true},
+      "active_months": [3, 4, 5, 6, 7, 8, 9, 10],
+      "notes": "Nocturnal migration calls common"
+    },
+    "Mallard": {
+      "scientific_name": "Anas platyrhynchos",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": true,
+      "habitat_preferences": {"wetland": 1.0, "grassland": 0.5, "forest": 0.3, "oceanic": 0.2, "urban": 0.7},
+      "migration": {"resident": true, "summer_visitor": true, "winter_visitor": true, "passage_migrant": false},
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "notes": "Nocturnal feeding common"
+    },
+    "Eurasian Wigeon": {
+      "scientific_name": "Mareca penelope",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.95, "grassland": 0.6, "forest": 0.0, "oceanic": 0.3, "urban": 0.1},
+      "migration": {"resident": false, "summer_visitor": false, "winter_visitor": true, "passage_migrant": true},
+      "active_months": [8, 9, 10, 11, 12, 1, 2, 3, 4]
+    },
+    "Eurasian Teal": {
+      "scientific_name": "Anas crecca",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 1.0, "grassland": 0.3, "forest": 0.2, "oceanic": 0.1, "urban": 0.2},
+      "migration": {"resident": true, "summer_visitor": true, "winter_visitor": true, "passage_migrant": true},
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    },
+    "Common Goldeneye": {
+      "scientific_name": "Bucephala clangula",
+      "diurnal": true,
+      "crepuscular": false,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.9, "grassland": 0.0, "forest": 0.3, "oceanic": 0.5, "urban": 0.1},
+      "migration": {"resident": true, "summer_visitor": true, "winter_visitor": true, "passage_migrant": false},
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    },
+    "Common Scoter": {
+      "scientific_name": "Melanitta nigra",
+      "diurnal": true,
+      "crepuscular": false,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.1, "grassland": 0.0, "forest": 0.0, "oceanic": 1.0, "urban": 0.0},
+      "migration": {"resident": false, "summer_visitor": false, "winter_visitor": true, "passage_migrant": true},
+      "active_months": [9, 10, 11, 12, 1, 2, 3],
+      "notes": "COASTAL/OCEANIC - inland wetland detections questionable"
+    },
+    "Common Loon": {
+      "scientific_name": "Gavia immer",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.7, "grassland": 0.0, "forest": 0.0, "oceanic": 0.9, "urban": 0.0},
+      "migration": {"resident": false, "summer_visitor": false, "winter_visitor": true, "passage_migrant": true},
+      "active_months": [10, 11, 12, 1, 2, 3],
+      "notes": "Primarily coastal, rare inland"
+    },
+    "Great Bittern": {
+      "scientific_name": "Botaurus stellaris",
+      "diurnal": false,
+      "crepuscular": true,
+      "nocturnal": true,
+      "habitat_preferences": {"wetland": 1.0, "grassland": 0.0, "forest": 0.0, "oceanic": 0.0, "urban": 0.0},
+      "migration": {"resident": true, "summer_visitor": true, "winter_visitor": false, "passage_migrant": false},
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "notes": "CREPUSCULAR/NOCTURNAL - booming calls at dawn/dusk"
+    },
+    "Gray Heron": {
+      "scientific_name": "Ardea cinerea",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.95, "grassland": 0.3, "forest": 0.1, "oceanic": 0.4, "urban": 0.3},
+      "migration": {"resident": true, "summer_visitor": true, "winter_visitor": false, "passage_migrant": false},
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    },
+    "Eurasian Curlew": {
+      "scientific_name": "Numenius arquata",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.9, "grassland": 0.8, "forest": 0.0, "oceanic": 0.5, "urban": 0.0},
+      "migration": {"resident": false, "summer_visitor": true, "winter_visitor": false, "passage_migrant": true},
+      "active_months": [3, 4, 5, 6, 7, 8, 9]
+    },
+    "Common Snipe": {
+      "scientific_name": "Gallinago gallinago",
+      "diurnal": false,
+      "crepuscular": true,
+      "nocturnal": true,
+      "habitat_preferences": {"wetland": 1.0, "grassland": 0.7, "forest": 0.0, "oceanic": 0.1, "urban": 0.0},
+      "migration": {"resident": true, "summer_visitor": true, "winter_visitor": false, "passage_migrant": true},
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "notes": "CREPUSCULAR - drumming displays at dusk"
+    },
+    "Common Sandpiper": {
+      "scientific_name": "Actitis hypoleucos",
+      "diurnal": true,
+      "crepuscular": false,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.9, "grassland": 0.2, "forest": 0.0, "oceanic": 0.3, "urban": 0.1},
+      "migration": {"resident": false, "summer_visitor": true, "winter_visitor": false, "passage_migrant": true},
+      "active_months": [4, 5, 6, 7, 8, 9]
+    },
+    "Common Redshank": {
+      "scientific_name": "Tringa totanus",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.95, "grassland": 0.6, "forest": 0.0, "oceanic": 0.5, "urban": 0.0},
+      "migration": {"resident": false, "summer_visitor": true, "winter_visitor": false, "passage_migrant": true},
+      "active_months": [3, 4, 5, 6, 7, 8, 9]
+    },
+    "Black-headed Gull": {
+      "scientific_name": "Chroicocephalus ridibundus",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.8, "grassland": 0.5, "forest": 0.0, "oceanic": 0.7, "urban": 0.6},
+      "migration": {"resident": true, "summer_visitor": true, "winter_visitor": true, "passage_migrant": false},
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    },
+    "Common Gull": {
+      "scientific_name": "Larus canus",
+      "diurnal": true,
+      "crepuscular": false,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.7, "grassland": 0.5, "forest": 0.0, "oceanic": 0.8, "urban": 0.5},
+      "migration": {"resident": true, "summer_visitor": true, "winter_visitor": true, "passage_migrant": false},
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    },
+    "Great Black-backed Gull": {
+      "scientific_name": "Larus marinus",
+      "diurnal": true,
+      "crepuscular": false,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.3, "grassland": 0.1, "forest": 0.0, "oceanic": 1.0, "urban": 0.2},
+      "migration": {"resident": true, "summer_visitor": false, "winter_visitor": false, "passage_migrant": false},
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "notes": "Primarily coastal/oceanic"
+    },
+    "Hooded Crow": {
+      "scientific_name": "Corvus cornix",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.7, "grassland": 0.8, "forest": 0.6, "oceanic": 0.4, "urban": 0.9},
+      "migration": {"resident": true, "summer_visitor": false, "winter_visitor": false, "passage_migrant": false},
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    },
+    "Carrion Crow": {
+      "scientific_name": "Corvus corone",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.6, "grassland": 0.8, "forest": 0.7, "oceanic": 0.3, "urban": 0.9},
+      "migration": {"resident": true, "summer_visitor": false, "winter_visitor": false, "passage_migrant": false},
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    },
+    "Common Raven": {
+      "scientific_name": "Corvus corax",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.4, "grassland": 0.6, "forest": 0.8, "oceanic": 0.5, "urban": 0.3},
+      "migration": {"resident": true, "summer_visitor": false, "winter_visitor": false, "passage_migrant": false},
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    },
+    "Eurasian Magpie": {
+      "scientific_name": "Pica pica",
+      "diurnal": true,
+      "crepuscular": false,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.5, "grassland": 0.7, "forest": 0.6, "oceanic": 0.1, "urban": 0.9},
+      "migration": {"resident": true, "summer_visitor": false, "winter_visitor": false, "passage_migrant": false},
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    },
+    "Eurasian Jay": {
+      "scientific_name": "Garrulus glandarius",
+      "diurnal": true,
+      "crepuscular": false,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.2, "grassland": 0.3, "forest": 0.95, "oceanic": 0.0, "urban": 0.4},
+      "migration": {"resident": true, "summer_visitor": false, "winter_visitor": false, "passage_migrant": false},
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "notes": "Forest specialist"
+    },
+    "Yellowhammer": {
+      "scientific_name": "Emberiza citrinella",
+      "diurnal": true,
+      "crepuscular": false,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.6, "grassland": 0.9, "forest": 0.7, "oceanic": 0.0, "urban": 0.3},
+      "migration": {"resident": true, "summer_visitor": false, "winter_visitor": false, "passage_migrant": false},
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    },
+    "Common Reed Bunting": {
+      "scientific_name": "Emberiza schoeniclus",
+      "diurnal": true,
+      "crepuscular": false,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 1.0, "grassland": 0.6, "forest": 0.0, "oceanic": 0.0, "urban": 0.1},
+      "migration": {"resident": true, "summer_visitor": true, "winter_visitor": false, "passage_migrant": false},
+      "active_months": [3, 4, 5, 6, 7, 8, 9, 10, 11]
+    },
+    "Sedge Warbler": {
+      "scientific_name": "Acrocephalus schoenobaenus",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 1.0, "grassland": 0.4, "forest": 0.0, "oceanic": 0.0, "urban": 0.0},
+      "migration": {"resident": false, "summer_visitor": true, "winter_visitor": false, "passage_migrant": false},
+      "active_months": [5, 6, 7, 8, 9],
+      "notes": "Wetland specialist, summer migrant"
+    },
+    "Tawny Owl": {
+      "scientific_name": "Strix aluco",
+      "diurnal": false,
+      "crepuscular": true,
+      "nocturnal": true,
+      "habitat_preferences": {"wetland": 0.2, "grassland": 0.1, "forest": 0.95, "oceanic": 0.0, "urban": 0.3},
+      "migration": {"resident": true, "summer_visitor": false, "winter_visitor": false, "passage_migrant": false},
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "notes": "STRICTLY NOCTURNAL - diurnal vocalizations rare"
+    },
+    "Lesser Spotted Woodpecker": {
+      "scientific_name": "Dryobates minor",
+      "diurnal": true,
+      "crepuscular": false,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.1, "grassland": 0.0, "forest": 0.95, "oceanic": 0.0, "urban": 0.1},
+      "migration": {"resident": true, "summer_visitor": false, "winter_visitor": false, "passage_migrant": false},
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "notes": "STRICTLY DIURNAL - nocturnal detections are FALSE POSITIVES"
+    },
+    "Great Spotted Woodpecker": {
+      "scientific_name": "Dendrocopos major",
+      "diurnal": true,
+      "crepuscular": false,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.1, "grassland": 0.0, "forest": 0.95, "oceanic": 0.0, "urban": 0.3},
+      "migration": {"resident": true, "summer_visitor": false, "winter_visitor": false, "passage_migrant": false},
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "notes": "STRICTLY DIURNAL - nocturnal detections are FALSE POSITIVES"
+    },
+    "European Green Woodpecker": {
+      "scientific_name": "Picus viridis",
+      "diurnal": true,
+      "crepuscular": false,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.2, "grassland": 0.6, "forest": 0.9, "oceanic": 0.0, "urban": 0.3},
+      "migration": {"resident": true, "summer_visitor": false, "winter_visitor": false, "passage_migrant": false},
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "notes": "STRICTLY DIURNAL - nocturnal detections are FALSE POSITIVES"
+    },
+    "Western Capercaillie": {
+      "scientific_name": "Tetrao urogallus",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.0, "grassland": 0.0, "forest": 1.0, "oceanic": 0.0, "urban": 0.0},
+      "migration": {"resident": true, "summer_visitor": false, "winter_visitor": false, "passage_migrant": false},
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "notes": "REQUIRES OLD-GROWTH CONIFEROUS FOREST - wetland detections are FALSE POSITIVES"
+    },
+    "Black Grouse": {
+      "scientific_name": "Lyrurus tetrix",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.3, "grassland": 0.6, "forest": 0.8, "oceanic": 0.0, "urban": 0.0},
+      "migration": {"resident": true, "summer_visitor": false, "winter_visitor": false, "passage_migrant": false},
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "notes": "Forest edge and moorland specialist"
+    },
+    "Willow Ptarmigan": {
+      "scientific_name": "Lagopus lagopus",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.1, "grassland": 0.7, "forest": 0.2, "oceanic": 0.0, "urban": 0.0},
+      "migration": {"resident": true, "summer_visitor": false, "winter_visitor": false, "passage_migrant": false},
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "notes": "Mountain and moorland specialist"
+    },
+    "Common Quail": {
+      "scientific_name": "Coturnix coturnix",
+      "diurnal": false,
+      "crepuscular": true,
+      "nocturnal": true,
+      "habitat_preferences": {"wetland": 0.3, "grassland": 0.95, "forest": 0.0, "oceanic": 0.0, "urban": 0.1},
+      "migration": {"resident": false, "summer_visitor": true, "winter_visitor": false, "passage_migrant": false},
+      "active_months": [5, 6, 7, 8, 9],
+      "notes": "NOCTURNAL CALLING - calls primarily at night during breeding season"
+    },
+    "Spotted Crake": {
+      "scientific_name": "Porzana porzana",
+      "diurnal": false,
+      "crepuscular": true,
+      "nocturnal": true,
+      "habitat_preferences": {"wetland": 1.0, "grassland": 0.2, "forest": 0.0, "oceanic": 0.0, "urban": 0.0},
+      "migration": {"resident": false, "summer_visitor": true, "winter_visitor": false, "passage_migrant": false},
+      "active_months": [5, 6, 7, 8, 9],
+      "notes": "CREPUSCULAR/NOCTURNAL - calls primarily at dusk/night"
+    },
+    "Water Rail": {
+      "scientific_name": "Rallus aquaticus",
+      "diurnal": false,
+      "crepuscular": true,
+      "nocturnal": true,
+      "habitat_preferences": {"wetland": 1.0, "grassland": 0.0, "forest": 0.0, "oceanic": 0.0, "urban": 0.0},
+      "migration": {"resident": true, "summer_visitor": true, "winter_visitor": false, "passage_migrant": false},
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "notes": "CREPUSCULAR/NOCTURNAL - most vocal at dusk/night"
+    },
+    "Common Coot": {
+      "scientific_name": "Fulica atra",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 1.0, "grassland": 0.1, "forest": 0.0, "oceanic": 0.2, "urban": 0.3},
+      "migration": {"resident": true, "summer_visitor": true, "winter_visitor": true, "passage_migrant": false},
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    },
+    "Common Moorhen": {
+      "scientific_name": "Gallinula chloropus",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 1.0, "grassland": 0.2, "forest": 0.0, "oceanic": 0.0, "urban": 0.4},
+      "migration": {"resident": true, "summer_visitor": true, "winter_visitor": false, "passage_migrant": false},
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    },
+    "European Storm-Petrel": {
+      "scientific_name": "Hydrobates pelagicus",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": true,
+      "habitat_preferences": {"wetland": 0.0, "grassland": 0.0, "forest": 0.0, "oceanic": 1.0, "urban": 0.0},
+      "migration": {"resident": false, "summer_visitor": true, "winter_visitor": false, "passage_migrant": false},
+      "active_months": [4, 5, 6, 7, 8, 9, 10],
+      "notes": "PELAGIC OCEANIC SPECIES - inland detections are FALSE POSITIVES"
+    },
+    "Manx Shearwater": {
+      "scientific_name": "Puffinus puffinus",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": true,
+      "habitat_preferences": {"wetland": 0.0, "grassland": 0.0, "forest": 0.0, "oceanic": 1.0, "urban": 0.0},
+      "migration": {"resident": false, "summer_visitor": true, "winter_visitor": false, "passage_migrant": false},
+      "active_months": [3, 4, 5, 6, 7, 8, 9, 10],
+      "notes": "PELAGIC OCEANIC SPECIES - inland detections are FALSE POSITIVES"
+    },
+    "Northern Gannet": {
+      "scientific_name": "Morus bassanus",
+      "diurnal": true,
+      "crepuscular": false,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.0, "grassland": 0.0, "forest": 0.0, "oceanic": 1.0, "urban": 0.0},
+      "migration": {"resident": false, "summer_visitor": true, "winter_visitor": false, "passage_migrant": true},
+      "active_months": [3, 4, 5, 6, 7, 8, 9, 10],
+      "notes": "PELAGIC OCEANIC - inland detections highly questionable"
+    },
+    "Bar-headed Goose": {
+      "scientific_name": "Anser indicus",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.9, "grassland": 0.7, "forest": 0.1, "oceanic": 0.2, "urban": 0.3},
+      "migration": {"resident": false, "summer_visitor": false, "winter_visitor": false, "passage_migrant": false},
+      "native_region": "Asia",
+      "active_months": [],
+      "notes": "NON-NATIVE to Europe - detections are ESCAPED BIRDS"
+    },
+    "Red Crossbill": {
+      "scientific_name": "Loxia curvirostra",
+      "diurnal": true,
+      "crepuscular": false,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.0, "grassland": 0.0, "forest": 1.0, "oceanic": 0.0, "urban": 0.0},
+      "migration": {"resident": true, "summer_visitor": false, "winter_visitor": false, "passage_migrant": false},
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "notes": "Coniferous forest specialist - requires spruce/pine cones"
+    },
+    "Boreal Owl": {
+      "scientific_name": "Aegolius funereus",
+      "diurnal": false,
+      "crepuscular": true,
+      "nocturnal": true,
+      "habitat_preferences": {"wetland": 0.0, "grassland": 0.0, "forest": 1.0, "oceanic": 0.0, "urban": 0.0},
+      "migration": {"resident": true, "summer_visitor": false, "winter_visitor": false, "passage_migrant": false},
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "notes": "STRICTLY NOCTURNAL - old-growth forest specialist"
+    }
+  },
+  "metadata": {
+    "version": "2.0",
+    "source": "Gaulossen Study 2025 + Norwegian Bird Literature",
+    "description": "Extended species database for biological validation - Norwegian wetland and migration species",
+    "coverage": "Norwegian birds - wetlands, forests, coastal, alpine",
+    "total_species": 62,
+    "notes": "Habitat preferences scored 0-1 (0=unsuitable, 1=optimal). Focus on species with clear biological constraints."
+  }
+}

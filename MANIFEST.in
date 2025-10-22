@@ -1,0 +1,26 @@
+# Include documentation
+include README.md
+include LICENSE
+include QUICKSTART.md
+include GAULOSSEN_RESULTS.md
+include PRAVEN_2.0_SUMMARY.md
+include SCIENTIFIC_VALIDATION_RESULTS.md
+
+# Include requirements
+include requirements.txt
+
+# Include data files
+recursive-include praven/data *.json *.csv
+
+# Include examples
+recursive-include examples *.py
+
+# Include validation framework
+recursive-include validation *.py
+
+# Exclude unnecessary files
+global-exclude *.pyc
+global-exclude *.pyo
+global-exclude __pycache__
+global-exclude .DS_Store
+global-exclude *.so

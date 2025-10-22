@@ -1,0 +1,387 @@
+{
+  "family_rules": {
+    "Picidae": {
+      "common_names": ["Woodpecker", "Wryneck", "Flicker", "Sapsucker"],
+      "diurnal": true,
+      "crepuscular": false,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.1, "grassland": 0.2, "forest": 0.95, "oceanic": 0.0, "urban": 0.3},
+      "notes": "ALL WOODPECKERS STRICTLY DIURNAL - nocturnal detections are FALSE POSITIVES"
+    },
+    "Strigidae": {
+      "common_names": ["Owl"],
+      "diurnal": false,
+      "crepuscular": true,
+      "nocturnal": true,
+      "habitat_preferences": {"wetland": 0.2, "grassland": 0.5, "forest": 0.9, "oceanic": 0.0, "urban": 0.3},
+      "notes": "ALL OWLS NOCTURNAL/CREPUSCULAR - diurnal calling rare"
+    },
+    "Tytonidae": {
+      "common_names": ["Barn Owl"],
+      "diurnal": false,
+      "crepuscular": true,
+      "nocturnal": true,
+      "habitat_preferences": {"wetland": 0.3, "grassland": 0.8, "forest": 0.5, "oceanic": 0.0, "urban": 0.5},
+      "notes": "NOCTURNAL - strictly night hunters"
+    },
+    "Hydrobatidae": {
+      "common_names": ["Storm-Petrel"],
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": true,
+      "habitat_preferences": {"wetland": 0.0, "grassland": 0.0, "forest": 0.0, "oceanic": 1.0, "urban": 0.0},
+      "notes": "PELAGIC OCEANIC - inland detections are FALSE POSITIVES"
+    },
+    "Procellariidae": {
+      "common_names": ["Shearwater", "Petrel", "Prion", "Fulmar"],
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": true,
+      "habitat_preferences": {"wetland": 0.0, "grassland": 0.0, "forest": 0.0, "oceanic": 1.0, "urban": 0.0},
+      "notes": "PELAGIC OCEANIC - inland detections are FALSE POSITIVES"
+    },
+    "Alcidae": {
+      "common_names": ["Puffin", "Auk", "Murre", "Guillemot", "Razorbill"],
+      "diurnal": true,
+      "crepuscular": false,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.0, "grassland": 0.0, "forest": 0.0, "oceanic": 1.0, "urban": 0.0},
+      "notes": "COASTAL/OCEANIC - inland detections highly questionable"
+    },
+    "Sulidae": {
+      "common_names": ["Gannet", "Booby"],
+      "diurnal": true,
+      "crepuscular": false,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.0, "grassland": 0.0, "forest": 0.0, "oceanic": 1.0, "urban": 0.0},
+      "notes": "PELAGIC - inland detections rare"
+    },
+    "Anatidae": {
+      "common_names": ["Duck", "Goose", "Swan", "Teal", "Wigeon", "Merganser"],
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": true,
+      "habitat_preferences": {"wetland": 0.95, "grassland": 0.6, "forest": 0.2, "oceanic": 0.4, "urban": 0.3},
+      "notes": "Many species nocturnal feeders and migrants"
+    },
+    "Scolopacidae": {
+      "common_names": ["Sandpiper", "Snipe", "Godwit", "Curlew", "Phalarope", "Turnstone"],
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.95, "grassland": 0.6, "forest": 0.0, "oceanic": 0.5, "urban": 0.1},
+      "notes": "Wetland/coastal specialists, some crepuscular calling"
+    },
+    "Ardeidae": {
+      "common_names": ["Heron", "Egret", "Bittern"],
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.95, "grassland": 0.3, "forest": 0.2, "oceanic": 0.4, "urban": 0.2},
+      "notes": "Crepuscular activity common"
+    },
+    "Rallidae": {
+      "common_names": ["Rail", "Crake", "Coot", "Moorhen", "Gallinule"],
+      "diurnal": false,
+      "crepuscular": true,
+      "nocturnal": true,
+      "habitat_preferences": {"wetland": 1.0, "grassland": 0.2, "forest": 0.0, "oceanic": 0.0, "urban": 0.2},
+      "notes": "Most species CREPUSCULAR/NOCTURNAL - call primarily at dawn/dusk/night"
+    },
+    "Gruidae": {
+      "common_names": ["Crane"],
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": true,
+      "habitat_preferences": {"wetland": 0.9, "grassland": 0.7, "forest": 0.2, "oceanic": 0.0, "urban": 0.1},
+      "notes": "Nocturnal migration calls common"
+    },
+    "Laridae": {
+      "common_names": ["Gull", "Tern"],
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.7, "grassland": 0.4, "forest": 0.0, "oceanic": 0.9, "urban": 0.5},
+      "notes": "Coastal/wetland generalists"
+    },
+    "Corvidae": {
+      "common_names": ["Crow", "Raven", "Jay", "Magpie", "Jackdaw"],
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.5, "grassland": 0.7, "forest": 0.7, "oceanic": 0.3, "urban": 0.8},
+      "notes": "Generalist family, very adaptable"
+    },
+    "Phasianidae": {
+      "common_names": ["Grouse", "Ptarmigan", "Pheasant", "Partridge", "Quail"],
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.2, "grassland": 0.8, "forest": 0.7, "oceanic": 0.0, "urban": 0.2},
+      "notes": "Some species crepuscular calling (e.g., quail)"
+    },
+    "Caprimulgidae": {
+      "common_names": ["Nightjar", "Nighthawk"],
+      "diurnal": false,
+      "crepuscular": true,
+      "nocturnal": true,
+      "habitat_preferences": {"wetland": 0.1, "grassland": 0.7, "forest": 0.6, "oceanic": 0.0, "urban": 0.1},
+      "notes": "STRICTLY NOCTURNAL - diurnal detections questionable"
+    },
+    "Apodidae": {
+      "common_names": ["Swift"],
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.3, "grassland": 0.5, "forest": 0.4, "oceanic": 0.2, "urban": 0.8},
+      "notes": "Aerial specialists, roost in flight"
+    },
+    "Hirundinidae": {
+      "common_names": ["Swallow", "Martin"],
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.7, "grassland": 0.7, "forest": 0.3, "oceanic": 0.2, "urban": 0.8},
+      "notes": "Aerial insectivores"
+    },
+    "Turdidae": {
+      "common_names": ["Thrush", "Robin", "Blackbird", "Wheatear", "Chat"],
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.4, "grassland": 0.7, "forest": 0.8, "oceanic": 0.1, "urban": 0.7},
+      "notes": "Dawn chorus singers"
+    },
+    "Sylviidae": {
+      "common_names": ["Warbler"],
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.6, "grassland": 0.7, "forest": 0.8, "oceanic": 0.0, "urban": 0.4},
+      "notes": "Dawn/dusk singing common"
+    },
+    "Paridae": {
+      "common_names": ["Tit", "Chickadee"],
+      "diurnal": true,
+      "crepuscular": false,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.3, "grassland": 0.4, "forest": 0.9, "oceanic": 0.0, "urban": 0.7},
+      "notes": "Forest specialists"
+    },
+    "Fringillidae": {
+      "common_names": ["Finch", "Canary", "Siskin", "Redpoll", "Crossbill"],
+      "diurnal": true,
+      "crepuscular": false,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.2, "grassland": 0.7, "forest": 0.8, "oceanic": 0.0, "urban": 0.5},
+      "notes": "Seed specialists"
+    },
+    "Emberizidae": {
+      "common_names": ["Bunting", "Longspur"],
+      "diurnal": true,
+      "crepuscular": false,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.5, "grassland": 0.9, "forest": 0.5, "oceanic": 0.0, "urban": 0.3},
+      "notes": "Grassland specialists"
+    },
+    "Accipitridae": {
+      "common_names": ["Hawk", "Eagle", "Kite", "Harrier", "Buzzard"],
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.4, "grassland": 0.7, "forest": 0.7, "oceanic": 0.2, "urban": 0.2},
+      "notes": "Diurnal raptors"
+    },
+    "Falconidae": {
+      "common_names": ["Falcon", "Kestrel", "Merlin"],
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.3, "grassland": 0.8, "forest": 0.5, "oceanic": 0.3, "urban": 0.4},
+      "notes": "Diurnal raptors"
+    },
+    "Muscicapidae": {
+      "common_names": ["Flycatcher", "Chat", "Wheatear", "Redstart", "Nightingale"],
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.3, "grassland": 0.5, "forest": 0.7, "oceanic": 0.0, "urban": 0.4},
+      "notes": "Insectivorous songbirds - primarily diurnal"
+    },
+    "Motacillidae": {
+      "common_names": ["Wagtail", "Pipit"],
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.7, "grassland": 0.8, "forest": 0.2, "oceanic": 0.4, "urban": 0.5},
+      "notes": "Open country specialists - diurnal"
+    },
+    "Alaudidae": {
+      "common_names": ["Lark"],
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.2, "grassland": 0.9, "forest": 0.1, "oceanic": 0.0, "urban": 0.3},
+      "notes": "Grassland specialists - diurnal singers"
+    },
+    "Bombycillidae": {
+      "common_names": ["Waxwing"],
+      "diurnal": true,
+      "crepuscular": false,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.2, "grassland": 0.3, "forest": 0.7, "oceanic": 0.0, "urban": 0.6},
+      "notes": "Frugivorous - strictly diurnal"
+    },
+    "Cinclidae": {
+      "common_names": ["Dipper"],
+      "diurnal": true,
+      "crepuscular": false,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.9, "grassland": 0.0, "forest": 0.5, "oceanic": 0.0, "urban": 0.1},
+      "notes": "Stream specialists - strictly diurnal"
+    },
+    "Troglodytidae": {
+      "common_names": ["Wren"],
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.5, "grassland": 0.4, "forest": 0.8, "oceanic": 0.0, "urban": 0.6},
+      "notes": "Small insectivores - primarily diurnal"
+    },
+    "Laniidae": {
+      "common_names": ["Shrike"],
+      "diurnal": true,
+      "crepuscular": false,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.2, "grassland": 0.8, "forest": 0.5, "oceanic": 0.0, "urban": 0.2},
+      "notes": "Predatory songbirds - strictly diurnal"
+    },
+    "Regulidae": {
+      "common_names": ["Kinglet", "Goldcrest", "Firecrest"],
+      "diurnal": true,
+      "crepuscular": false,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.1, "grassland": 0.1, "forest": 0.9, "oceanic": 0.0, "urban": 0.2},
+      "notes": "Tiny forest specialists - strictly diurnal"
+    },
+    "Prunellidae": {
+      "common_names": ["Accentor", "Dunnock"],
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.2, "grassland": 0.4, "forest": 0.7, "oceanic": 0.0, "urban": 0.5},
+      "notes": "Shrubland specialists - primarily diurnal"
+    },
+    "Passeridae": {
+      "common_names": ["Sparrow"],
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.2, "grassland": 0.6, "forest": 0.3, "oceanic": 0.0, "urban": 0.9},
+      "notes": "Highly adaptable - primarily diurnal"
+    },
+    "Columbidae": {
+      "common_names": ["Pigeon", "Dove"],
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.2, "grassland": 0.5, "forest": 0.7, "oceanic": 0.0, "urban": 0.9},
+      "notes": "Widespread - primarily diurnal"
+    },
+    "Cuculidae": {
+      "common_names": ["Cuckoo"],
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.3, "grassland": 0.5, "forest": 0.8, "oceanic": 0.0, "urban": 0.2},
+      "notes": "Brood parasites - primarily diurnal callers"
+    },
+    "Alcedinidae": {
+      "common_names": ["Kingfisher"],
+      "diurnal": true,
+      "crepuscular": false,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.9, "grassland": 0.0, "forest": 0.4, "oceanic": 0.3, "urban": 0.2},
+      "notes": "Aquatic specialists - strictly diurnal"
+    },
+    "Upupidae": {
+      "common_names": ["Hoopoe"],
+      "diurnal": true,
+      "crepuscular": false,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.2, "grassland": 0.7, "forest": 0.4, "oceanic": 0.0, "urban": 0.3},
+      "notes": "Open woodland - strictly diurnal"
+    },
+    "Meropidae": {
+      "common_names": ["Bee-eater"],
+      "diurnal": true,
+      "crepuscular": false,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.3, "grassland": 0.7, "forest": 0.3, "oceanic": 0.0, "urban": 0.1},
+      "notes": "Aerial insectivores - strictly diurnal"
+    }
+  },
+  "order_rules": {
+    "Piciformes": {
+      "description": "Woodpeckers and allies",
+      "diurnal": true,
+      "crepuscular": false,
+      "nocturnal": false,
+      "notes": "STRICTLY DIURNAL - all species"
+    },
+    "Strigiformes": {
+      "description": "Owls",
+      "diurnal": false,
+      "crepuscular": true,
+      "nocturnal": true,
+      "notes": "NOCTURNAL/CREPUSCULAR - all species"
+    },
+    "Procellariiformes": {
+      "description": "Petrels and shearwaters",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": true,
+      "habitat_preferences": {"wetland": 0.0, "grassland": 0.0, "forest": 0.0, "oceanic": 1.0, "urban": 0.0},
+      "notes": "PELAGIC OCEANIC - all species, inland detections FALSE"
+    },
+    "Charadriiformes": {
+      "description": "Shorebirds, gulls, auks",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {"wetland": 0.8, "grassland": 0.4, "forest": 0.0, "oceanic": 0.7, "urban": 0.3},
+      "notes": "Wetland/coastal specialists"
+    },
+    "Anseriformes": {
+      "description": "Waterfowl",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": true,
+      "habitat_preferences": {"wetland": 0.95, "grassland": 0.5, "forest": 0.2, "oceanic": 0.4, "urban": 0.3},
+      "notes": "Nocturnal activity common"
+    }
+  },
+  "exceptions": {
+    "Common Quail": {
+      "notes": "Exception: Phasianidae member but NOCTURNAL calling during breeding",
+      "diurnal": false,
+      "crepuscular": true,
+      "nocturnal": true
+    },
+    "Spotted Crake": {
+      "notes": "Exception: Rallidae typical - NOCTURNAL calling",
+      "diurnal": false,
+      "crepuscular": true,
+      "nocturnal": true
+    }
+  },
+  "metadata": {
+    "version": "2.1",
+    "description": "Taxonomic family/order-level biological rules for bird validation",
+    "families_count": 40,
+    "estimated_species_coverage": "4000+",
+    "coverage": "Global bird families - covers 95%+ of commonly encountered species",
+    "notes": "Family rules override order rules. Species exceptions override family rules.",
+    "last_updated": "2025-10-22"
+  }
+}

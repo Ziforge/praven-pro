@@ -1,0 +1,261 @@
+{
+  "species": {
+    "Great Snipe": {
+      "scientific_name": "Gallinago media",
+      "diurnal": false,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {
+        "wetland": 0.95,
+        "grassland": 0.7,
+        "forest": 0.1,
+        "oceanic": 0.0,
+        "urban": 0.0
+      },
+      "migration": {
+        "resident": false,
+        "summer_visitor": false,
+        "winter_visitor": false,
+        "passage_migrant": true
+      },
+      "active_months": [8, 9, 10],
+      "iucn_status": "Near Threatened"
+    },
+    "Graylag Goose": {
+      "scientific_name": "Anser anser",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {
+        "wetland": 0.95,
+        "grassland": 0.8,
+        "forest": 0.1,
+        "oceanic": 0.3,
+        "urban": 0.2
+      },
+      "migration": {
+        "resident": true,
+        "summer_visitor": true,
+        "winter_visitor": false,
+        "passage_migrant": true
+      },
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    },
+    "Lesser Spotted Woodpecker": {
+      "scientific_name": "Dryobates minor",
+      "diurnal": true,
+      "crepuscular": false,
+      "nocturnal": false,
+      "habitat_preferences": {
+        "wetland": 0.1,
+        "grassland": 0.0,
+        "forest": 0.95,
+        "oceanic": 0.0,
+        "urban": 0.1
+      },
+      "migration": {
+        "resident": true,
+        "summer_visitor": false,
+        "winter_visitor": false,
+        "passage_migrant": false
+      },
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "notes": "STRICTLY DIURNAL - nocturnal detections are false positives"
+    },
+    "European Storm-Petrel": {
+      "scientific_name": "Hydrobates pelagicus",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": true,
+      "habitat_preferences": {
+        "wetland": 0.0,
+        "grassland": 0.0,
+        "forest": 0.0,
+        "oceanic": 1.0,
+        "urban": 0.0
+      },
+      "migration": {
+        "resident": false,
+        "summer_visitor": true,
+        "winter_visitor": false,
+        "passage_migrant": false
+      },
+      "active_months": [4, 5, 6, 7, 8, 9, 10],
+      "notes": "PELAGIC OCEANIC SPECIES - inland detections are false positives"
+    },
+    "Manx Shearwater": {
+      "scientific_name": "Puffinus puffinus",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": true,
+      "habitat_preferences": {
+        "wetland": 0.0,
+        "grassland": 0.0,
+        "forest": 0.0,
+        "oceanic": 1.0,
+        "urban": 0.0
+      },
+      "migration": {
+        "resident": false,
+        "summer_visitor": true,
+        "winter_visitor": false,
+        "passage_migrant": false
+      },
+      "active_months": [3, 4, 5, 6, 7, 8, 9, 10],
+      "notes": "PELAGIC OCEANIC SPECIES - inland detections are false positives"
+    },
+    "Bar-headed Goose": {
+      "scientific_name": "Anser indicus",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {
+        "wetland": 0.9,
+        "grassland": 0.7,
+        "forest": 0.1,
+        "oceanic": 0.2,
+        "urban": 0.3
+      },
+      "migration": {
+        "resident": false,
+        "summer_visitor": false,
+        "winter_visitor": false,
+        "passage_migrant": false
+      },
+      "native_region": "Asia",
+      "active_months": [],
+      "notes": "NON-NATIVE to Europe - detections likely escaped birds"
+    },
+    "Western Capercaillie": {
+      "scientific_name": "Tetrao urogallus",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {
+        "wetland": 0.0,
+        "grassland": 0.0,
+        "forest": 1.0,
+        "oceanic": 0.0,
+        "urban": 0.0
+      },
+      "migration": {
+        "resident": true,
+        "summer_visitor": false,
+        "winter_visitor": false,
+        "passage_migrant": false
+      },
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "notes": "Requires old-growth coniferous forest - wetland detections false positive"
+    },
+    "Hooded Crow": {
+      "scientific_name": "Corvus cornix",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": false,
+      "habitat_preferences": {
+        "wetland": 0.7,
+        "grassland": 0.8,
+        "forest": 0.6,
+        "oceanic": 0.4,
+        "urban": 0.9
+      },
+      "migration": {
+        "resident": true,
+        "summer_visitor": false,
+        "winter_visitor": false,
+        "passage_migrant": false
+      },
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    },
+    "Common Crane": {
+      "scientific_name": "Grus grus",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": true,
+      "habitat_preferences": {
+        "wetland": 0.95,
+        "grassland": 0.7,
+        "forest": 0.3,
+        "oceanic": 0.0,
+        "urban": 0.1
+      },
+      "migration": {
+        "resident": false,
+        "summer_visitor": true,
+        "winter_visitor": false,
+        "passage_migrant": true
+      },
+      "active_months": [3, 4, 5, 6, 7, 8, 9, 10],
+      "notes": "Nocturnal migration calls common"
+    },
+    "Pink-footed Goose": {
+      "scientific_name": "Anser brachyrhynchus",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": true,
+      "habitat_preferences": {
+        "wetland": 0.95,
+        "grassland": 0.8,
+        "forest": 0.1,
+        "oceanic": 0.3,
+        "urban": 0.1
+      },
+      "migration": {
+        "resident": false,
+        "summer_visitor": false,
+        "winter_visitor": true,
+        "passage_migrant": true
+      },
+      "active_months": [9, 10, 11, 12, 1, 2, 3, 4],
+      "notes": "Nocturnal migration calls common"
+    },
+    "Mallard": {
+      "scientific_name": "Anas platyrhynchos",
+      "diurnal": true,
+      "crepuscular": true,
+      "nocturnal": true,
+      "habitat_preferences": {
+        "wetland": 1.0,
+        "grassland": 0.5,
+        "forest": 0.3,
+        "oceanic": 0.2,
+        "urban": 0.7
+      },
+      "migration": {
+        "resident": true,
+        "summer_visitor": true,
+        "winter_visitor": true,
+        "passage_migrant": false
+      },
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "notes": "59% nocturnal feeding activity in Gaulossen study"
+    },
+    "Yellowhammer": {
+      "scientific_name": "Emberiza citrinella",
+      "diurnal": true,
+      "crepuscular": false,
+      "nocturnal": false,
+      "habitat_preferences": {
+        "wetland": 0.6,
+        "grassland": 0.9,
+        "forest": 0.7,
+        "oceanic": 0.0,
+        "urban": 0.3
+      },
+      "migration": {
+        "resident": true,
+        "summer_visitor": false,
+        "winter_visitor": false,
+        "passage_migrant": false
+      },
+      "active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    }
+  },
+  "metadata": {
+    "version": "1.0",
+    "source": "Gaulossen Study 2025 + Literature",
+    "description": "Species database for biological validation",
+    "coverage": "Northern European bird species",
+    "notes": "Habitat preferences scored 0-1 (0=unsuitable, 1=optimal)"
+  }
+}

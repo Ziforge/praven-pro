@@ -1,0 +1,43 @@
+================================================================================
+Praven Pro Validation Summary Report
+================================================================================
+
+Generated: 2025-10-22 03:28:40
+Location: (63.341, 10.215)
+Date: 2025-10-13
+Habitat: wetland
+
+Validation Results
+--------------------------------------------------------------------------------
+Total Detections:     6,805
+Auto-Accepted:        581 (8.5%)
+Auto-Rejected:        23 (0.3%)
+Needs Review:         6,201 (91.1%)
+
+Top Rejection Reasons
+--------------------------------------------------------------------------------
+[  4] Habitat mismatch: Lesser Spotted Woodpecker prefers forest (score=0.95), detected in wetland (score=0.10)
+[  4] Habitat mismatch: European Storm-Petrel is pelagic/oceanic species, detected in wetland habitat (score=0.00)
+[  3] Habitat mismatch: Manx Shearwater is pelagic/oceanic species, detected in wetland habitat (score=0.00)
+[  1] Non-native species: Bar-headed Goose is native to Asia, not Europe (likely escaped bird)
+[  1] Habitat mismatch: Lesser Spotted Woodpecker prefers forest (score=0.95), detected in wetland (score=0.10); Temporal impossibility: Lesser Spotted Woodpecker is strictly diurnal, detected at 22:52 (night period)
+[  1] Habitat mismatch: Lesser Spotted Woodpecker prefers forest (score=0.95), detected in wetland (score=0.10); Temporal impossibility: Lesser Spotted Woodpecker is strictly diurnal, detected at 23:19 (night period)
+[  1] Habitat mismatch: Lesser Spotted Woodpecker prefers forest (score=0.95), detected in wetland (score=0.10); Temporal impossibility: Lesser Spotted Woodpecker is strictly diurnal, detected at 00:22 (night period)
+[  1] Habitat mismatch: Lesser Spotted Woodpecker prefers forest (score=0.95), detected in wetland (score=0.10); Temporal impossibility: Lesser Spotted Woodpecker is strictly diurnal, detected at 01:21 (night period)
+[  1] Habitat mismatch: Lesser Spotted Woodpecker prefers forest (score=0.95), detected in wetland (score=0.10); Temporal impossibility: Lesser Spotted Woodpecker is strictly diurnal, detected at 02:00 (night period)
+[  1] Habitat mismatch: Western Capercaillie prefers forest (score=1.00), detected in wetland (score=0.00)
+
+Smart Review Selection
+--------------------------------------------------------------------------------
+Original review workload: 6,201 detections
+Priority review (top 3/species): 192 detections
+Workload reduction: 97%
+Species requiring review: 85
+
+Review Instructions:
+  1. Open the PRIORITY_REVIEW.csv file
+  2. Review the top 3 detections for each species
+  3. If all 3 are valid → Accept the whole species
+  4. If all 3 are invalid → Reject the whole species
+  5. If uncertain → Review additional detections from review.csv
+

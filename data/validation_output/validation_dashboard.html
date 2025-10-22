@@ -1,0 +1,163 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Praven Pro Validation Dashboard</title>
+        <meta charset="utf-8">
+        <style>
+            body {
+                font-family: 'Segoe UI', Arial, sans-serif;
+                margin: 0;
+                padding: 20px;
+                background: #f5f5f5;
+            }
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                background: white;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+            h1 {
+                color: #2c3e50;
+                border-bottom: 3px solid #3498db;
+                padding-bottom: 10px;
+            }
+            h2 {
+                color: #34495e;
+                margin-top: 30px;
+            }
+            .metrics {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 20px;
+                margin: 30px 0;
+            }
+            .metric-card {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                padding: 20px;
+                border-radius: 10px;
+                text-align: center;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            .metric-card.green {
+                background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            }
+            .metric-card.red {
+                background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%);
+            }
+            .metric-card.orange {
+                background: linear-gradient(135deg, #f46b45 0%, #eea849 100%);
+            }
+            .metric-value {
+                font-size: 48px;
+                font-weight: bold;
+                margin: 10px 0;
+            }
+            .metric-label {
+                font-size: 14px;
+                opacity: 0.9;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            .metric-subtitle {
+                font-size: 18px;
+                margin-top: 5px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            th, td {
+                padding: 12px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+            th {
+                background-color: #f0f0f0;
+                font-weight: bold;
+            }
+            tr:hover {
+                background-color: #f5f5f5;
+            }
+            .chart {
+                margin: 30px 0;
+                padding: 20px;
+                background: #f9f9f9;
+                border-radius: 5px;
+            }
+            .status-badge {
+                display: inline-block;
+                padding: 5px 10px;
+                border-radius: 3px;
+                font-size: 12px;
+                font-weight: bold;
+            }
+            .status-accept { background: #27ae60; color: white; }
+            .status-reject { background: #e74c3c; color: white; }
+            .status-review { background: #f39c12; color: white; }
+            .timestamp {
+                color: #7f8c8d;
+                font-size: 14px;
+                text-align: center;
+                margin-top: 30px;
+                padding-top: 20px;
+                border-top: 1px solid #ecf0f1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>🐦 Praven Pro Validation Dashboard</h1>
+            <p style="color:#7f8c8d; font-size:16px;">Automated BirdNET Biological Validation Results</p>
+
+            
+
+            <div class="metrics">
+                <div class="metric-card">
+                    <div class="metric-label">Total Detections</div>
+                    <div class="metric-value">6,805</div>
+                    <div class="metric-subtitle">90 species</div>
+                </div>
+
+                <div class="metric-card green">
+                    <div class="metric-label">Auto-Accepted</div>
+                    <div class="metric-value">1,173</div>
+                    <div class="metric-subtitle">17.2%</div>
+                </div>
+
+                <div class="metric-card red">
+                    <div class="metric-label">Auto-Rejected</div>
+                    <div class="metric-value">23</div>
+                    <div class="metric-subtitle">0.3%</div>
+                </div>
+
+                <div class="metric-card orange">
+                    <div class="metric-label">Needs Review</div>
+                    <div class="metric-value">5,609</div>
+                    <div class="metric-subtitle">82.4%</div>
+                </div>
+            </div>
+
+            <h2>📊 Status Breakdown by Species (Top 10)</h2>
+            <table style='width:100%; border-collapse:collapse; margin-top:20px;'><tr style='background:#f0f0f0'><th>Species</th><th>Accept</th><th>Reject</th><th>Review</th><th>Total</th></tr><tr><td>Graylag Goose</td><td style='color:green'>541</td><td style='color:red'>0</td><td style='color:orange'>2330</td><td><b>2871</b></td></tr><tr><td>Spotted Crake</td><td style='color:green'>517</td><td style='color:red'>0</td><td style='color:orange'>2039</td><td><b>2556</b></td></tr><tr><td>Great Snipe</td><td style='color:green'>16</td><td style='color:red'>0</td><td style='color:orange'>173</td><td><b>189</b></td></tr><tr><td>Pink-footed Goose</td><td style='color:green'>19</td><td style='color:red'>0</td><td style='color:orange'>170</td><td><b>189</b></td></tr><tr><td>Great Bittern</td><td style='color:green'>27</td><td style='color:red'>0</td><td style='color:orange'>102</td><td><b>129</b></td></tr><tr><td>Hooded Crow</td><td style='color:green'>2</td><td style='color:red'>0</td><td style='color:orange'>85</td><td><b>87</b></td></tr><tr><td>Carrion Crow</td><td style='color:green'>2</td><td style='color:red'>0</td><td style='color:orange'>82</td><td><b>84</b></td></tr><tr><td>Greater White-fronted Goose</td><td style='color:green'>3</td><td style='color:red'>0</td><td style='color:orange'>68</td><td><b>71</b></td></tr><tr><td>Common Crane</td><td style='color:green'>1</td><td style='color:red'>0</td><td style='color:orange'>69</td><td><b>70</b></td></tr><tr><td>Common Grasshopper-Warbler</td><td style='color:green'>6</td><td style='color:red'>0</td><td style='color:orange'>53</td><td><b>59</b></td></tr></table>
+
+            <h2>❌ Top Rejection Reasons</h2>
+            <table style='width:100%; border-collapse:collapse; margin-top:20px;'><tr style='background:#f0f0f0'><th>Rejection Reason</th><th>Count</th></tr><tr><td>Habitat mismatch: Lesser Spotted Woodpecker prefers forest (score=0.95), detecte...</td><td><b>4</b></td></tr><tr><td>Habitat mismatch: European Storm-Petrel is pelagic/oceanic species, detected in ...</td><td><b>4</b></td></tr><tr><td>Habitat mismatch: Manx Shearwater is pelagic/oceanic species, detected in wetlan...</td><td><b>3</b></td></tr><tr><td>Non-native species: Bar-headed Goose is native to Asia, not Europe (likely escap...</td><td><b>1</b></td></tr><tr><td>Habitat mismatch: Lesser Spotted Woodpecker prefers forest (score=0.95), detecte...</td><td><b>1</b></td></tr><tr><td>Habitat mismatch: Lesser Spotted Woodpecker prefers forest (score=0.95), detecte...</td><td><b>1</b></td></tr><tr><td>Habitat mismatch: Lesser Spotted Woodpecker prefers forest (score=0.95), detecte...</td><td><b>1</b></td></tr><tr><td>Habitat mismatch: Lesser Spotted Woodpecker prefers forest (score=0.95), detecte...</td><td><b>1</b></td></tr><tr><td>Habitat mismatch: Lesser Spotted Woodpecker prefers forest (score=0.95), detecte...</td><td><b>1</b></td></tr><tr><td>Habitat mismatch: Western Capercaillie prefers forest (score=1.00), detected in ...</td><td><b>1</b></td></tr></table>
+
+            <h2>🔝 Most Detected Species</h2>
+            <table>
+                <tr><th>Species</th><th>Detections</th><th>% of Total</th></tr>
+                <tr><td>Graylag Goose</td><td><b>2871</b></td><td>42.2%</td></tr><tr><td>Spotted Crake</td><td><b>2556</b></td><td>37.6%</td></tr><tr><td>Great Snipe</td><td><b>189</b></td><td>2.8%</td></tr><tr><td>Pink-footed Goose</td><td><b>189</b></td><td>2.8%</td></tr><tr><td>Great Bittern</td><td><b>129</b></td><td>1.9%</td></tr><tr><td>Hooded Crow</td><td><b>87</b></td><td>1.3%</td></tr><tr><td>Carrion Crow</td><td><b>84</b></td><td>1.2%</td></tr><tr><td>Greater White-fronted Goose</td><td><b>71</b></td><td>1.0%</td></tr><tr><td>Common Crane</td><td><b>70</b></td><td>1.0%</td></tr><tr><td>Common Grasshopper-Warbler</td><td><b>59</b></td><td>0.9%</td></tr>
+            </table>
+
+            <div class="timestamp">
+                Generated: 2025-10-22 03:15:31 | Praven Pro v2.1
+            </div>
+        </div>
+    </body>
+    </html>
+    

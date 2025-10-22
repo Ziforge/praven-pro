@@ -1,0 +1,50 @@
+usage: validate.py [-h] --lat LAT --lon LON
+                   [--habitat {wetland,forest,oceanic,grassland,urban,agricultural}]
+                   [--date DATE] [--rain RAIN] [--fog FOG] [--temp TEMP]
+                   [--output OUTPUT]
+                   [--formats {csv,json,excel} [{csv,json,excel} ...]]
+                   [--no-ebird] [--no-auto-weather] [--no-auto-habitat]
+                   input_csv
+
+Validate BirdNET detections using biological rules
+
+positional arguments:
+  input_csv             Path to BirdNET detections CSV file
+
+options:
+  -h, --help            show this help message and exit
+  --lat LAT             Latitude of study site
+  --lon LON             Longitude of study site
+  --habitat {wetland,forest,oceanic,grassland,urban,agricultural}
+                        Habitat type of study site (auto-detected from GPS if
+                        not specified)
+  --date DATE           Study date (YYYY-MM-DD format)
+  --rain RAIN           Rain intensity (0.0-1.0)
+  --fog FOG             Fog density (0.0-1.0)
+  --temp TEMP           Temperature (°C)
+  --output OUTPUT       Output directory (default: same as input)
+  --formats {csv,json,excel} [{csv,json,excel} ...]
+                        Output formats (default: csv)
+  --no-ebird            Disable eBird preloading (faster but less accurate)
+  --no-auto-weather     Disable automatic weather fetching from GPS
+  --no-auto-habitat     Disable automatic habitat detection from GPS
+
+Examples:
+  # Validate with auto-detection (habitat and weather from GPS)
+  python validate.py detections.csv --lat 63.341 --lon 10.215 --date 2025-10-13
+
+  # Validate with manual habitat specification
+  python validate.py detections.csv --lat 63.341 --lon 10.215 --habitat wetland
+
+  # Validate with manual weather conditions
+  python validate.py detections.csv --lat 63.341 --lon 10.215 --habitat wetland --rain 0.8 --fog 0.7
+
+  # Disable auto-detection features
+  python validate.py detections.csv --lat 63.341 --lon 10.215 --habitat wetland     --no-auto-weather --no-auto-habitat
+
+  # Export to multiple formats
+  python validate.py detections.csv --lat 63.341 --lon 10.215 --formats csv json
+
+Habitats:
+  wetland, forest, oceanic, grassland, urban, agricultural (or auto-detected from GPS)
+        

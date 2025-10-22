@@ -1,0 +1,26 @@
+# GitHub Pages Configuration
+title: "Praven Pro - BirdNET Biological Validation"
+description: "Automated biological validation for BirdNET acoustic monitoring using taxonomic rules"
+baseurl: "/praven-pro"
+url: "https://ziforge.github.io"
+
+# Theme (optional - using custom HTML)
+theme: null
+
+# Exclude files from GitHub Pages build
+exclude:
+  - README.md
+  - DIAGRAMS.md
+  - PROCESS_FLOW.md
+  - SCREENSHOTS.md
+  - TECHNICAL_SUMMARY.md
+  - "*.md"
+  - guides/
+  - scientific/
+  - results/
+  - images/
+  - diagrams/
+
+# Include only index.html
+include:
+  - index.html
