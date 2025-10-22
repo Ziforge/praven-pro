@@ -112,11 +112,14 @@ Tested on the Gaulossen Nature Reserve dataset (October 2025):
 [Full study →](https://ziforge.github.io/gaulosen-study/)
 
 **⚠️ Current Limitations:** This system is a proof-of-concept validated on a single wetland study. Extensive development is required for broader real-world deployment, including:
-- Expanded species coverage beyond 40 bird families
-- Regional phenology databases for migration timing
-- Validation across diverse habitat types and geographic regions
-- Independent testing on multiple datasets
-- Peer review of validation methodology
+- **Limited species coverage:** Only 40 bird families (primarily European species)
+- **Incomplete weather data:** Temperature, precipitation, visibility, wind, clouds only - missing humidity, barometric pressure, snow/ice conditions
+- **No seasonal migration models:** Lacks comprehensive phenology databases for regional migration timing variations
+- **Single habitat type validation:** Tested only on wetland ecosystem, not forests, grasslands, urban areas, etc.
+- **Limited geographic scope:** Validated only in Norway (63°N), untested across latitudes, continents, and climate zones
+- **No call type validation:** Cannot distinguish song vs. flight calls vs. alarm calls
+- **Independent testing needed:** Requires validation on multiple datasets from different researchers and locations
+- **Peer review required:** Validation methodology and biological rules need formal scientific peer review
 
 ## Module Structure
 
